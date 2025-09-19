@@ -1,0 +1,12 @@
+USE [HARAS_3D87]
+GO
+
+INSERT INTO [dbo].[Raca]
+           ([Registro], [Descricao], [Data], [hora])
+VALUES
+    (986, 'MANGALARGA MARCHADOR', '2008-03-14T00:00:00', '15:10'),
+    (78901, 'ARABE', '2010-10-12T00:00:00', '12:19'),
+    (22, 'ANDALUZ', '2009-09-22T00:00:00', '09:23'),
+    (8796, 'APPALOOSA', '2013-04-18T00:00:00', '11:29'),
+    (667, 'QUARTO DE MILHA', '2012-10-09T00:00:00', '12:14')
+GO
