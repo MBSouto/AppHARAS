@@ -11,7 +11,7 @@ CREATE TABLE Animais
 (
 	Animais_Id int IDENTITY PRIMARY KEY,
 	nrchip int NOT NULL,
-	nome varchar NOT NULL,
+	nome varchar (40) NOT NULL,
 	dtNascimento datetime NULL,
 	valor decimal(10, 2) NULL,
 	vendido bit NULL,

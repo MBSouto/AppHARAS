@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "zDtbBQSLXIKeXsP12vdIEY6Nq0+OQSU0abgK6VTQoGVGeR6bRLEKxgmk77tWOiY+wmjc3Swi8z2KSY/9njc79w==",
+  "dgSpecHash": "EYNn3oU829s=",
   "success": true,
-  "projectFilePath": "/home/bruno-souto/dotnet/HARAS_3D87/HARAS_3D87.csproj",
+  "projectFilePath": "C:\\Projetos\\AppHARAS\\HARAS_3D87\\HARAS_3D87.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }
