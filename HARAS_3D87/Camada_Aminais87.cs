@@ -19,8 +19,11 @@ namespace HARAS_3D87
         //Definindo DataTable para a tabela Raça e variáveis para cada campo da tabela
         public DataTable DtAnimais = new DataTable();
 
-        public string sDescricao_Animais = "", sdata = "", shora = "";
-        public Int32 iRegistro_Animais = 0;
+        public string snome = "";
+        public Int32 inrchip = 0;
+        public bool bvendido = false;
+        public DateTime? ddtNascimento = null;
+        public decimal dvalor = 0;
     }
 }
 
