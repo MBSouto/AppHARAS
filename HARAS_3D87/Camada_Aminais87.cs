@@ -14,7 +14,7 @@ namespace HARAS_3D87
         // Abrindo comunicação com a camada conexao e definindo leitor de dados (DataReader)
         SqlConnection conexao = new SqlConnection();
         Camada_Conexao87 conexaoDB = new Camada_Conexao87();
-        SqlDataReader Dr;
+        SqlDataReader? Dr;
 
         //Definindo DataTable para a tabela Raça e variáveis para cada campo da tabela
         public DataTable DtAnimais = new DataTable();
