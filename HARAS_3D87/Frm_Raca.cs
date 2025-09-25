@@ -12,10 +12,10 @@ namespace HARAS_3D87
 {
     public partial class Frm_Raca : Form
     {
-        public Frm_Raca()
-        {
-            InitializeComponent();
-        }
+        //public Frm_Raca()
+        //{
+        //    InitializeComponent();
+        //}
 
         private void label1_Click(object sender, EventArgs e)
         {

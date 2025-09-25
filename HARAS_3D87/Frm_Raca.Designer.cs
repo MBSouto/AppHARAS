@@ -1,7 +1,76 @@
 ﻿namespace HARAS_3D87
 {
-    partial class Frm_Raca
+    partial class Frm_Raca : Form
     {
+        int operacao;
+        int ChaveID;
+
+        // Instancia da camada de dados
+        Camada_Raca87 MeuAdapterRaca = new Camada_Raca87();
+
+        public Frm_Raca()
+        {
+            InitializeComponent();
+        }
+
+        // Metodo para permitir apenas numeros no campo registro
+        //private void txtRegistro_KeyPress(object sender, KeyPressEventArgs e)
+        //{
+        //    if (!Char.IsNumber(e.KeyChar) && e.KeyChar != Convert.ToChar(8))
+        //        e.Handled = true;
+        //}
+
+        // Metodo para limpar o formulario
+        private void LimparFormulario()
+        {
+            txtRegistro.Clear();
+            txtDescricao.Clear();
+            operacao = 0;
+            ChaveID = 0;
+        }
+
+        private void HabilitarControlesIniciais(bool status)
+        {
+            Group_Lista.Enabled = status;
+            Group_Dados.Enabled = !status;
+            habilitarBotoes(status);
+        }
+
+        private void habilitarBotoes(bool status)
+        {
+            bntNovo.Enabled = status;
+            btnEditar.Enabled = status;
+            btnExcluir.Enabled = status;
+            btnSalvar.Enabled = !status;
+            btnCancelar.Enabled = !status;
+        }
+
+        private void MontarLista(string varDescricao)
+        {
+            string Mensagem;
+
+            Mensagem = MeuAdapterRaca.MontarListaRaca(varDescricao);
+
+            // Verifica se ocorreu algum erro e exibe a mensagem
+            if (Mensagem != "") MessageBox.Show(Mensagem, "Erro encontrado: ");
+
+            // Exibe os dados no grid
+            dataGridView.DataSource = MeuAdapterRaca.DtRaca;
+
+            btnEditar.Enabled = dataGridView.Rows.Count > 0;
+            btnExcluir.Enabled = btnEditar.Enabled;
+
+            //MostrarRegistro_noForm();
+        }
+
+        private void FrmRACA_Load(object sender, EventArgs e)
+        {
+            HabilitarControlesIniciais(true);
+            LimparFormulario();
+            MontarLista("");
+            txtFiltrar.Focus();
+        }
+
         /// <summary>
         /// Required designer variable.
         /// </summary>
@@ -11,6 +80,7 @@
         /// Clean up any resources being used.
         /// </summary>
         /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        ///
         protected override void Dispose(bool disposing)
         {
             if (disposing && (components != null))
