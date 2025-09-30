@@ -30,8 +30,9 @@ namespace HARAS_3D87
             string msg = string.Empty;
             conexao = conexaoDB.AbrirBanco();
 
+
             //Montar comando com o stored procedure
-            SqlCommand cmd = new SqlCommand("SPTMontarListaRaca", conexao);
+            SqlCommand cmd = new SqlCommand("STPMontarListaRaca", conexao);
             cmd.CommandType = CommandType.StoredProcedure;
             cmd.Connection = conexao;
 
@@ -75,7 +76,7 @@ namespace HARAS_3D87
 
             conexao = conexaoDB.AbrirBanco();
             //Montar comando com o stored procedure
-            SqlCommand cmd = new SqlCommand("SPTLocalizarRacaChaveID", conexao);
+            SqlCommand cmd = new SqlCommand("STPLocalizarRacaChaveID", conexao);
             cmd.CommandType = CommandType.StoredProcedure;
             cmd.Connection = conexao;
 
@@ -129,7 +130,7 @@ namespace HARAS_3D87
                 conexao = conexaoDB.AbrirBanco();
 
                 //Montar comando com o stored procedure
-                SqlCommand cmd = new SqlCommand("SPTInserirRaca", conexao);
+                SqlCommand cmd = new SqlCommand("STPInserirRaca", conexao);
                 cmd.CommandType = CommandType.StoredProcedure;
                 cmd.Connection = conexao;
 
@@ -177,7 +178,7 @@ namespace HARAS_3D87
                 conexao = conexaoDB.AbrirBanco();
 
                 //Montar comando com o stored procedure
-                SqlCommand cmd = new SqlCommand("SPTAlterarRaca", conexao);
+                SqlCommand cmd = new SqlCommand("STPAlterarRaca", conexao);
                 cmd.CommandType = CommandType.StoredProcedure;
                 cmd.Connection = conexao;
 
@@ -224,7 +225,7 @@ namespace HARAS_3D87
                 conexao = conexaoDB.AbrirBanco();
 
                 //Montar comando com o stored procedure
-                SqlCommand cmd = new SqlCommand("SPTExcluirRaca", conexao);
+                SqlCommand cmd = new SqlCommand("STPExcluirRaca", conexao);
                 cmd.CommandType = CommandType.StoredProcedure;
                 cmd.Connection = conexao;
 

@@ -8,11 +8,6 @@
         // Instancia da camada de dados
         Camada_Raca87 MeuAdapterRaca = new Camada_Raca87();
 
-        public Frm_Raca()
-        {
-            InitializeComponent();
-        }
-
         // Metodo para permitir apenas numeros no campo registro
         //private void txtRegistro_KeyPress(object sender, KeyPressEventArgs e)
         //{
@@ -32,7 +27,7 @@
         private void HabilitarControlesIniciais(bool status)
         {
             Group_Lista.Enabled = status;
-            Group_Dados.Enabled = !status;
+            Group_Dados.Enabled = status;
             habilitarBotoes(status);
         }
 
@@ -60,7 +55,7 @@
             btnEditar.Enabled = dataGridView.Rows.Count > 0;
             btnExcluir.Enabled = btnEditar.Enabled;
 
-            //MostrarRegistro_noForm();
+            MostrarRegistro_noForm();
         }
 
         private void FrmRACA_Load(object sender, EventArgs e)
@@ -133,12 +128,18 @@
             // 
             // dataGridView
             // 
+            dataGridView.AllowUserToAddRows = false;
+            dataGridView.AllowUserToDeleteRows = false;
+            dataGridView.AllowUserToResizeColumns = false;
+            dataGridView.AllowUserToResizeRows = false;
             dataGridView.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridView.Location = new Point(6, 13);
             dataGridView.Name = "dataGridView";
+            dataGridView.ReadOnly = true;
+            dataGridView.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             dataGridView.Size = new Size(764, 213);
             dataGridView.TabIndex = 0;
-            dataGridView.CellContentClick += dataGridView1_CellContentClick;
+            dataGridView.CellContentClick += dataGridView_CellContentClick;
             // 
             // Group_Dados
             // 
@@ -199,6 +200,7 @@
             txtFiltrar.Name = "txtFiltrar";
             txtFiltrar.Size = new Size(654, 23);
             txtFiltrar.TabIndex = 3;
+            txtFiltrar.TextChanged += txtFiltrar_TextChanged;
             // 
             // Label2
             // 
@@ -317,6 +319,7 @@
             Controls.Add(Group_Lista);
             Name = "Frm_Raca";
             Text = "Frm_Raca";
+            Load += label4_Click;
             Group_Lista.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)dataGridView).EndInit();
             Group_Dados.ResumeLayout(false);

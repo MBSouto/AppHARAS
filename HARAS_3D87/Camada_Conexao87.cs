@@ -15,7 +15,7 @@ namespace HARAS_3D87
         {
             SqlConnection conexao = new SqlConnection("Data Source=" +
                 "Localhost;Initial Catalog=HARAS_3D87;Persist Security Info=True;" +
-                "User ID=sa; Password=SenhaForte123!");
+                "User ID=sa; Password=SenhaForte123!;Encrypt=True;TrustServerCertificate=True;");
             SqlCommand cmd = new SqlCommand();
 
             if (conexao.State == ConnectionState.Open) conexao.Close();
