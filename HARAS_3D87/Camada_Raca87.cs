@@ -82,7 +82,7 @@ namespace HARAS_3D87
 
             //Parâmetros de entrada (imput) para o stored procedure
             cmd.Parameters.Clear();
-            cmd.Parameters.AddWithValue("@RACAID", varRacaID);
+            cmd.Parameters.AddWithValue("@RACA_ID", varRacaID);
 
             try
             { 
@@ -121,7 +121,10 @@ namespace HARAS_3D87
 
         #region Método para inserir uma nova Raça
         
-        public string InserirRaca(Int32 varRegistro, string varDescricao)
+        public string InserirRaca(Int32 varRegistro, 
+                                    string varDescricao,
+                                        DateTime varData,
+                                            string varHora)
         {
             string msg = string.Empty;
 
@@ -138,6 +141,8 @@ namespace HARAS_3D87
                 //cmd.Parameters.Clear();
                 cmd.Parameters.AddWithValue("@REGISTRO", varRegistro);
                 cmd.Parameters.AddWithValue("@DESCRICAO", varDescricao);
+                cmd.Parameters.AddWithValue("@DATA", varData);
+                cmd.Parameters.AddWithValue("@HORA", varHora);
 
                 cmd.ExecuteNonQuery();
 

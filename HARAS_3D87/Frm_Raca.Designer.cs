@@ -140,6 +140,7 @@
             dataGridView.Size = new Size(764, 213);
             dataGridView.TabIndex = 0;
             dataGridView.CellContentClick += dataGridView_CellContentClick;
+            dataGridView.RowEnter += dataGridView_RowEnter;
             // 
             // Group_Dados
             // 
@@ -256,6 +257,7 @@
             btnSalvar.Size = new Size(81, 56);
             btnSalvar.TabIndex = 5;
             btnSalvar.UseVisualStyleBackColor = true;
+            btnSalvar.Click += btnSalvar_Click;
             // 
             // bntNovo
             // 
@@ -269,6 +271,7 @@
             bntNovo.Size = new Size(81, 56);
             bntNovo.TabIndex = 7;
             bntNovo.UseVisualStyleBackColor = true;
+            bntNovo.Click += btnNovo_Click;
             // 
             // btnEditar
             // 
@@ -282,6 +285,7 @@
             btnEditar.Size = new Size(81, 56);
             btnEditar.TabIndex = 6;
             btnEditar.UseVisualStyleBackColor = true;
+            btnEditar.Click += btnEditar_Click;
             // 
             // btnCancelar
             // 
@@ -295,6 +299,7 @@
             btnCancelar.Size = new Size(81, 56);
             btnCancelar.TabIndex = 4;
             btnCancelar.UseVisualStyleBackColor = true;
+            btnCancelar.Click += btnCancelar_Click;
             // 
             // btnExcluir
             // 
