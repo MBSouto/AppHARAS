@@ -138,7 +138,7 @@ namespace HARAS_3D87
                 cmd.Connection = conexao;
 
                 //Parâmetros de entrada (imput) para o stored procedure
-                //cmd.Parameters.Clear();
+                cmd.Parameters.Clear();
                 cmd.Parameters.AddWithValue("@REGISTRO", varRegistro);
                 cmd.Parameters.AddWithValue("@DESCRICAO", varDescricao);
                 cmd.Parameters.AddWithValue("@DATA", varData);

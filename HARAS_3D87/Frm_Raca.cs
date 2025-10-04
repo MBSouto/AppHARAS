@@ -9,6 +9,7 @@ using System.Linq.Expressions;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace HARAS_3D87
 {
@@ -24,6 +25,8 @@ namespace HARAS_3D87
         {
             HabilitarControlesIniciais(false);
             operacao = 2;
+            MostrarRegistro_noForm();
+            Group_Dados.Enabled = true;
             txtRegistro.Focus();
         }
 
@@ -36,9 +39,10 @@ namespace HARAS_3D87
 
         private void btnNovo_Click(object sender, EventArgs e)
         {
-            HabilitarControlesIniciais(false);
-            operacao = 1;
             LimparFormulario();
+            HabilitarControlesIniciais(false);
+            Group_Dados.Enabled = true;
+            operacao = 1;
             txtRegistro.Focus();
         }
 
@@ -57,6 +61,43 @@ namespace HARAS_3D87
                 return;
             }
             GravarRegistro(operacao);
+        }
+
+        private void btnExcluir_Click(object sender, EventArgs e)
+        {
+            if (string.IsNullOrEmpty(txtRegistro.Text))
+            {
+                MessageBox.Show("Selecione um registro para exclusão!");
+                txtFiltrar.Focus();
+                return;
+            }
+
+            if (MessageBox.Show("Confirma a exclusão do registro?", "Exclusão",
+                                    MessageBoxButtons.YesNo,
+                                        MessageBoxIcon.Question) ==
+                                            DialogResult.Yes)
+            {
+                string Mensagem;
+
+                try
+                {
+                    // Chama o método para excluir o registro
+                    Mensagem = MeuAdapterRaca.ExcluirRaca(ChaveID);
+
+                    // Exibe mensagem de erro, se houver
+                    if (Mensagem != "") MessageBox.Show(Mensagem, "Erro Encontrado:");
+
+                    HabilitarControlesIniciais(true);
+                    LimparFormulario();
+                    MontarLista("");
+                }
+                catch (Exception ex)
+                {
+                    // Armazenar erro encontrado
+                    MessageBox.Show(ex.Message.ToString());
+                }
+            }
+            
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -99,6 +140,7 @@ namespace HARAS_3D87
             MontarLista(txtFiltrar.Text);
         }
 
+        #region Metodo para carregar o formulario
         private void MostrarRegistro_noForm()
         {
             // Seleciona o registro atual do DataGridView e exibe os detalhes no formulário
@@ -124,8 +166,9 @@ namespace HARAS_3D87
             // Habilita os botões de edição e exclusão
             else LimparFormulario();
         }
+        #endregion
 
-
+        #region Metodo para gravar registros
         private void GravarRegistro(int op)
         {
             string Mensagem = "";
@@ -157,11 +200,11 @@ namespace HARAS_3D87
             {
                 try
                 {
-                    /* Mensagem = MeuAdapterRaca.AlterarRaca(Convert.ToInt32(txtRegistro.Text),
+                    Mensagem = MeuAdapterRaca.AlterarRaca(Convert.ToInt32(txtRegistro.Text),
                                     txtDescricao.Text,
                                         txtCadastro.Value,
                                             DateTime.Now.ToString("t"),
-                                                ChaveID); */
+                                                ChaveID);
 
                     HabilitarControlesIniciais(true);
                     LimparFormulario();
@@ -174,5 +217,13 @@ namespace HARAS_3D87
                 }
             }
         }
+        #endregion
+
+        #region Metodo para apagar registros
+        private void ApagarRegistro()
+        {
+            
+        }
+        #endregion
     }
 }

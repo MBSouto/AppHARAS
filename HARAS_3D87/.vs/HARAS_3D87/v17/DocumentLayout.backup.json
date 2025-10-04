@@ -7,16 +7,16 @@
       "RelativeMoniker": "D:0:0:{4F988411-A976-4689-92D2-985C7A41BFDC}|HARAS_3D87.csproj|solutionrelative:frm_raca.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{4F988411-A976-4689-92D2-985C7A41BFDC}|HARAS_3D87.csproj|c:\\projetos\\appharas\\haras_3d87\\camada_raca87.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4F988411-A976-4689-92D2-985C7A41BFDC}|HARAS_3D87.csproj|solutionrelative:camada_raca87.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{4F988411-A976-4689-92D2-985C7A41BFDC}|HARAS_3D87.csproj|c:\\projetos\\appharas\\haras_3d87\\frm_raca.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{4F988411-A976-4689-92D2-985C7A41BFDC}|HARAS_3D87.csproj|solutionrelative:frm_raca.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{4F988411-A976-4689-92D2-985C7A41BFDC}|HARAS_3D87.csproj|c:\\projetos\\appharas\\haras_3d87\\frm_raca.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{4F988411-A976-4689-92D2-985C7A41BFDC}|HARAS_3D87.csproj|solutionrelative:frm_raca.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4F988411-A976-4689-92D2-985C7A41BFDC}|HARAS_3D87.csproj|c:\\projetos\\appharas\\haras_3d87\\camada_raca87.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4F988411-A976-4689-92D2-985C7A41BFDC}|HARAS_3D87.csproj|solutionrelative:camada_raca87.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -26,30 +26,29 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Frm_Raca.Designer.cs",
-              "DocumentMoniker": "C:\\Projetos\\AppHARAS\\HARAS_3D87\\Frm_Raca.Designer.cs",
-              "RelativeDocumentMoniker": "Frm_Raca.Designer.cs",
-              "ToolTip": "C:\\Projetos\\AppHARAS\\HARAS_3D87\\Frm_Raca.Designer.cs",
-              "RelativeToolTip": "Frm_Raca.Designer.cs",
-              "ViewState": "AgIAABMAAAAAAAAAAAAgwAAAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 0,
+              "Title": "Frm_Raca.cs [Design]",
+              "DocumentMoniker": "C:\\Projetos\\AppHARAS\\HARAS_3D87\\Frm_Raca.cs",
+              "RelativeDocumentMoniker": "Frm_Raca.cs",
+              "ToolTip": "C:\\Projetos\\AppHARAS\\HARAS_3D87\\Frm_Raca.cs [Design]*",
+              "RelativeToolTip": "Frm_Raca.cs [Design]*",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-02T01:10:24.429Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-10-04T01:30:07.749Z",
+              "EditorCaption": " [Design]"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 3,
               "Title": "Camada_Raca87.cs",
               "DocumentMoniker": "C:\\Projetos\\AppHARAS\\HARAS_3D87\\Camada_Raca87.cs",
               "RelativeDocumentMoniker": "Camada_Raca87.cs",
               "ToolTip": "C:\\Projetos\\AppHARAS\\HARAS_3D87\\Camada_Raca87.cs",
               "RelativeToolTip": "Camada_Raca87.cs",
-              "ViewState": "AgIAAHoAAAAAAAAAAAAQwJAAAAA+AAAAAAAAAA==",
+              "ViewState": "AgIAABkAAAAAAAAAAAAQwN4AAAAIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-10-02T01:21:59.667Z",
               "EditorCaption": ""
@@ -57,27 +56,28 @@
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "Frm_Raca.cs",
-              "DocumentMoniker": "C:\\Projetos\\AppHARAS\\HARAS_3D87\\Frm_Raca.cs",
-              "RelativeDocumentMoniker": "Frm_Raca.cs",
-              "ToolTip": "C:\\Projetos\\AppHARAS\\HARAS_3D87\\Frm_Raca.cs",
-              "RelativeToolTip": "Frm_Raca.cs",
-              "ViewState": "AgIAAIwAAAAAAAAAAAAqwJsAAAAqAAAAAAAAAA==",
+              "Title": "Frm_Raca.Designer.cs",
+              "DocumentMoniker": "C:\\Projetos\\AppHARAS\\HARAS_3D87\\Frm_Raca.Designer.cs",
+              "RelativeDocumentMoniker": "Frm_Raca.Designer.cs",
+              "ToolTip": "C:\\Projetos\\AppHARAS\\HARAS_3D87\\Frm_Raca.Designer.cs*",
+              "RelativeToolTip": "Frm_Raca.Designer.cs*",
+              "ViewState": "AgIAABgAAAAAAAAAAAAowDkAAAAcAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-02T01:01:51.346Z",
+              "WhenOpened": "2025-10-02T01:10:24.429Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Frm_Raca.cs [Design]",
+              "DocumentIndex": 1,
+              "Title": "Frm_Raca.cs",
               "DocumentMoniker": "C:\\Projetos\\AppHARAS\\HARAS_3D87\\Frm_Raca.cs",
               "RelativeDocumentMoniker": "Frm_Raca.cs",
-              "ToolTip": "C:\\Projetos\\AppHARAS\\HARAS_3D87\\Frm_Raca.cs [Design]",
-              "RelativeToolTip": "Frm_Raca.cs [Design]",
+              "ToolTip": "C:\\Projetos\\AppHARAS\\HARAS_3D87\\Frm_Raca.cs*",
+              "RelativeToolTip": "Frm_Raca.cs*",
+              "ViewState": "AgIAAD0AAAAAAAAAAAAcwEEAAABBAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-02T00:35:08.638Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2025-10-02T01:01:51.346Z",
+              "EditorCaption": ""
             }
           ]
         }

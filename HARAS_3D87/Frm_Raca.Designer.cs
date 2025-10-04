@@ -8,13 +8,6 @@
         // Instancia da camada de dados
         Camada_Raca87 MeuAdapterRaca = new Camada_Raca87();
 
-        // Metodo para permitir apenas numeros no campo registro
-        //private void txtRegistro_KeyPress(object sender, KeyPressEventArgs e)
-        //{
-        //    if (!Char.IsNumber(e.KeyChar) && e.KeyChar != Convert.ToChar(8))
-        //        e.Handled = true;
-        //}
-
         // Metodo para limpar o formulario
         private void LimparFormulario()
         {
@@ -313,6 +306,7 @@
             btnExcluir.Size = new Size(81, 56);
             btnExcluir.TabIndex = 3;
             btnExcluir.UseVisualStyleBackColor = true;
+            btnExcluir.Click += btnExcluir_Click;
             // 
             // Frm_Raca
             // 
