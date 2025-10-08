@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("HARAS_3D87")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+8c3ecad85bebb87e95e6cd2da3f7338e092de47d")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+84cd1326e7c3c1dbf445a990197ca15ad2ce7f5d")]
 [assembly: System.Reflection.AssemblyProductAttribute("HARAS_3D87")]
 [assembly: System.Reflection.AssemblyTitleAttribute("HARAS_3D87")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

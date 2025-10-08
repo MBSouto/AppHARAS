@@ -10,18 +10,11 @@ using System.Windows.Forms;
 
 namespace HARAS_3D87
 {
-    public partial class Frm_Menu : Form
+    public partial class Frm_Login : Form
     {
-        public Frm_Menu()
+        public Frm_Login()
         {
             InitializeComponent();
-        }
-
-        private void RACAToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            Frm_Raca frm = new Frm_Raca();
-            frm.ShowDialog();
-            frm.Dispose();
         }
     }
 }

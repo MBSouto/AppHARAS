@@ -1,6 +1,6 @@
 ﻿namespace HARAS_3D87
 {
-    partial class Frm_Menu
+    partial class Frm_Login
     {
         /// <summary>
         /// Required designer variable.
@@ -28,19 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Frm_Menu));
-            SuspendLayout();
-            // 
-            // Frm_Menu
-            // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
-            AutoScaleMode = AutoScaleMode.Font;
-            BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
-            ClientSize = new Size(824, 525);
-            Name = "Frm_Menu";
-            Text = "App HARAS v.1.0";
-            WindowState = FormWindowState.Maximized;
-            ResumeLayout(false);
+            this.components = new System.ComponentModel.Container();
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Text = "Frm_Login";
         }
 
         #endregion
