@@ -26,7 +26,7 @@
 
         private void habilitarBotoes(bool status)
         {
-            bntNovo.Enabled = status;
+            btnNovo.Enabled = status;
             btnEditar.Enabled = status;
             btnExcluir.Enabled = status;
             btnSalvar.Enabled = !status;
@@ -100,7 +100,7 @@
             Label1 = new Label();
             Group_Barra = new GroupBox();
             btnSalvar = new Button();
-            bntNovo = new Button();
+            btnNovo = new Button();
             btnEditar = new Button();
             btnCancelar = new Button();
             btnExcluir = new Button();
@@ -228,7 +228,7 @@
             // Group_Barra
             // 
             Group_Barra.Controls.Add(btnSalvar);
-            Group_Barra.Controls.Add(bntNovo);
+            Group_Barra.Controls.Add(btnNovo);
             Group_Barra.Controls.Add(btnEditar);
             Group_Barra.Controls.Add(btnCancelar);
             Group_Barra.Controls.Add(btnExcluir);
@@ -252,19 +252,19 @@
             btnSalvar.UseVisualStyleBackColor = true;
             btnSalvar.Click += btnSalvar_Click;
             // 
-            // bntNovo
+            // btnNovo
             // 
-            bntNovo.FlatAppearance.BorderColor = Color.White;
-            bntNovo.FlatAppearance.BorderSize = 2;
-            bntNovo.FlatAppearance.MouseDownBackColor = Color.White;
-            bntNovo.FlatAppearance.MouseOverBackColor = Color.Black;
-            bntNovo.Image = (Image)resources.GetObject("bntNovo.Image");
-            bntNovo.Location = new Point(331, 13);
-            bntNovo.Name = "bntNovo";
-            bntNovo.Size = new Size(81, 56);
-            bntNovo.TabIndex = 7;
-            bntNovo.UseVisualStyleBackColor = true;
-            bntNovo.Click += btnNovo_Click;
+            btnNovo.FlatAppearance.BorderColor = Color.White;
+            btnNovo.FlatAppearance.BorderSize = 2;
+            btnNovo.FlatAppearance.MouseDownBackColor = Color.White;
+            btnNovo.FlatAppearance.MouseOverBackColor = Color.Black;
+            btnNovo.Image = (Image)resources.GetObject("btnNovo.Image");
+            btnNovo.Location = new Point(331, 13);
+            btnNovo.Name = "btnNovo";
+            btnNovo.Size = new Size(81, 56);
+            btnNovo.TabIndex = 7;
+            btnNovo.UseVisualStyleBackColor = true;
+            btnNovo.Click += btnNovo_Click;
             // 
             // btnEditar
             // 
@@ -332,7 +332,7 @@
         private GroupBox Group_Lista;
         private GroupBox Group_Dados;
         private GroupBox Group_Barra;
-        private Button bntNovo;
+        private Button btnNovo;
         private Button btnEditar;
         private Button btnSalvar;
         private Button btnCancelar;
