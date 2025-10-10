@@ -29,13 +29,13 @@
         private void InitializeComponent()
         {
             Group_Dados = new GroupBox();
+            CmbNome = new ComboBox();
             txtSenha = new TextBox();
             label = new Label();
             txtNome = new Label();
             Group_Barra = new GroupBox();
             btnOK = new Button();
             btnCancelar = new Button();
-            CmbNome = new ComboBox();
             Group_Dados.SuspendLayout();
             Group_Barra.SuspendLayout();
             SuspendLayout();
@@ -51,6 +51,14 @@
             Group_Dados.Size = new Size(776, 138);
             Group_Dados.TabIndex = 2;
             Group_Dados.TabStop = false;
+            // 
+            // CmbNome
+            // 
+            CmbNome.FormattingEnabled = true;
+            CmbNome.Location = new Point(331, 38);
+            CmbNome.Name = "CmbNome";
+            CmbNome.Size = new Size(210, 23);
+            CmbNome.TabIndex = 6;
             // 
             // txtSenha
             // 
@@ -103,6 +111,7 @@
             btnOK.TabIndex = 7;
             btnOK.Text = "OK!";
             btnOK.UseVisualStyleBackColor = true;
+            btnOK.Click += btnOk_Click;
             // 
             // btnCancelar
             // 
@@ -116,14 +125,7 @@
             btnCancelar.TabIndex = 4;
             btnCancelar.Text = "Cancelar";
             btnCancelar.UseVisualStyleBackColor = true;
-            // 
-            // CmbNome
-            // 
-            CmbNome.FormattingEnabled = true;
-            CmbNome.Location = new Point(331, 38);
-            CmbNome.Name = "CmbNome";
-            CmbNome.Size = new Size(210, 23);
-            CmbNome.TabIndex = 6;
+            btnCancelar.Click += btnCancelar_Click;
             // 
             // Frm_Login
             // 

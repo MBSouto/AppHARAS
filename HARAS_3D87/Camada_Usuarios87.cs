@@ -66,5 +66,65 @@ namespace HARAS_3D87
         }
         #endregion
 
+        #region Método para executar o SP de consulta do usuário para validação do login
+        
+        public string LocalizarUsuario(string varNome, string varSenha)
+        {
+            string msg = string.Empty, varAcesso = string.Empty;
+
+            conexao = conexaoDB.AbrirBanco();
+            //Montar comando com o stored procedure
+            SqlCommand cmd = new SqlCommand("STPLocalizarUsuario", conexao);
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Connection = conexao;
+
+            //Parâmetros de entrada (imput) para o stored procedure
+            cmd.Parameters.Clear();
+            cmd.Parameters.AddWithValue("@NOME", varNome);
+            cmd.Parameters.AddWithValue("@SENHA", varSenha);
+
+            //Parâmetros de saída (output) para o stored procedure
+            SqlParameter Acesso;
+            Acesso = cmd.Parameters.Add("@ACESSO", SqlDbType.Int, 50);
+            Acesso.Direction = ParameterDirection.Output;
+
+            Dr = cmd.ExecuteReader();
+            try
+            { 
+                if (Dr.HasRows) // Se encontrou algum registro
+                {
+                    Dr.Read(); //Ler o registro encontrado
+                    iAcesso_usuario = Convert.ToInt32(Dr["ACESSO"].ToString()); //Pegar o valor do parâmetro de saída
+                    msg = "Usuário Localizado";
+                }
+                else
+                {
+                    msg = "Usuário ou senha inválidos!";
+                    Dr.Close();
+                    conexaoDB.FecharBanco(conexao);
+                }
+            }
+            catch (SqlException sqlErrr)
+            {
+                Camada_Conexao87.RetornaErroSqlServer retErro = new Camada_Conexao87.RetornaErroSqlServer();
+                string msgErro = retErro.RetornaErro(sqlErrr.Number);
+                if (string.IsNullOrEmpty(msgErro))
+                    msgErro = sqlErrr.Message;
+                msg = msgErro;
+            }
+            catch (Exception err)
+            {
+                //Armazenar a mensagem de erro na variável msg
+                msg = err.Message.ToString();
+            }
+            finally
+            {
+                if (conexao.State == ConnectionState.Open) conexaoDB.FecharBanco(conexao);
+            }
+            return msg; //Retorna mensagem para o formulário
+        }
+
+        #endregion
+
     }
 }

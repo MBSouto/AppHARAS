@@ -3,20 +3,16 @@
   "WorkspaceRootPath": "C:\\Projetos\\AppHARAS\\HARAS_3D87\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{4F988411-A976-4689-92D2-985C7A41BFDC}|HARAS_3D87.csproj|c:\\projetos\\appharas\\haras_3d87\\frm_raca.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4F988411-A976-4689-92D2-985C7A41BFDC}|HARAS_3D87.csproj|solutionrelative:frm_raca.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{4F988411-A976-4689-92D2-985C7A41BFDC}|HARAS_3D87.csproj|c:\\projetos\\appharas\\haras_3d87\\frm_login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{4F988411-A976-4689-92D2-985C7A41BFDC}|HARAS_3D87.csproj|solutionrelative:frm_login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{4F988411-A976-4689-92D2-985C7A41BFDC}|HARAS_3D87.csproj|c:\\projetos\\appharas\\haras_3d87\\frm_login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{4F988411-A976-4689-92D2-985C7A41BFDC}|HARAS_3D87.csproj|solutionrelative:frm_login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{4F988411-A976-4689-92D2-985C7A41BFDC}|HARAS_3D87.csproj|c:\\projetos\\appharas\\haras_3d87\\camada_usuarios87.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{4F988411-A976-4689-92D2-985C7A41BFDC}|HARAS_3D87.csproj|solutionrelative:camada_usuarios87.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4F988411-A976-4689-92D2-985C7A41BFDC}|HARAS_3D87.csproj|C:\\Projetos\\AppHARAS\\HARAS_3D87\\frm_login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{4F988411-A976-4689-92D2-985C7A41BFDC}|HARAS_3D87.csproj|solutionrelative:frm_login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     }
   ],
   "DocumentGroupContainers": [
@@ -26,21 +22,8 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 2,
           "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Frm_Raca.cs",
-              "DocumentMoniker": "C:\\Projetos\\AppHARAS\\HARAS_3D87\\Frm_Raca.cs",
-              "RelativeDocumentMoniker": "Frm_Raca.cs",
-              "ToolTip": "C:\\Projetos\\AppHARAS\\HARAS_3D87\\Frm_Raca.cs",
-              "RelativeToolTip": "Frm_Raca.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-08T23:58:10.387Z",
-              "EditorCaption": ""
-            },
             {
               "$type": "Document",
               "DocumentIndex": 2,
@@ -55,26 +38,26 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 1,
               "Title": "Camada_Usuarios87.cs",
               "DocumentMoniker": "C:\\Projetos\\AppHARAS\\HARAS_3D87\\Camada_Usuarios87.cs",
               "RelativeDocumentMoniker": "Camada_Usuarios87.cs",
               "ToolTip": "C:\\Projetos\\AppHARAS\\HARAS_3D87\\Camada_Usuarios87.cs",
               "RelativeToolTip": "Camada_Usuarios87.cs",
-              "ViewState": "AgIAAAsAAAAAAAAAAAAQwBcAAAAIAAAAAAAAAA==",
+              "ViewState": "AgIAAEkAAAAAAAAAAAAQwFoAAAAVAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-10-08T23:05:33.43Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "Frm_Login.cs",
               "DocumentMoniker": "C:\\Projetos\\AppHARAS\\HARAS_3D87\\Frm_Login.cs",
               "RelativeDocumentMoniker": "Frm_Login.cs",
               "ToolTip": "C:\\Projetos\\AppHARAS\\HARAS_3D87\\Frm_Login.cs",
               "RelativeToolTip": "Frm_Login.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACcAAAAJAAAAAAAAAA==",
+              "ViewState": "AgIAACoAAAAAAAAAAAAqwEIAAAAqAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-10-08T22:38:56.986Z",
               "EditorCaption": ""
