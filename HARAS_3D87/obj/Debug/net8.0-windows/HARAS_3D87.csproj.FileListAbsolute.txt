@@ -50,8 +50,10 @@ C:\Projetos\AppHARAS\HARAS_3D87\bin\Debug\net8.0-windows\runtimes\win-x86\native
 C:\Projetos\AppHARAS\HARAS_3D87\bin\Debug\net8.0-windows\runtimes\win\lib\net8.0\System.Diagnostics.EventLog.dll
 C:\Projetos\AppHARAS\HARAS_3D87\bin\Debug\net8.0-windows\runtimes\win\lib\net8.0\System.Security.Cryptography.Pkcs.dll
 C:\Projetos\AppHARAS\HARAS_3D87\obj\Debug\net8.0-windows\HARAS_3D87.csproj.AssemblyReference.cache
+C:\Projetos\AppHARAS\HARAS_3D87\obj\Debug\net8.0-windows\HARAS_3D87.Frm_Login.resources
 C:\Projetos\AppHARAS\HARAS_3D87\obj\Debug\net8.0-windows\HARAS_3D87.Frm_Menu.resources
 C:\Projetos\AppHARAS\HARAS_3D87\obj\Debug\net8.0-windows\HARAS_3D87.Frm_Raca.resources
+C:\Projetos\AppHARAS\HARAS_3D87\obj\Debug\net8.0-windows\HARAS_3D87.Frm_Splash.resources
 C:\Projetos\AppHARAS\HARAS_3D87\obj\Debug\net8.0-windows\HARAS_3D87.Properties.Resources.resources
 C:\Projetos\AppHARAS\HARAS_3D87\obj\Debug\net8.0-windows\HARAS_3D87.csproj.GenerateResource.cache
 C:\Projetos\AppHARAS\HARAS_3D87\obj\Debug\net8.0-windows\HARAS_3D87.GeneratedMSBuildEditorConfig.editorconfig
@@ -65,4 +67,3 @@ C:\Projetos\AppHARAS\HARAS_3D87\obj\Debug\net8.0-windows\refint\HARAS_3D87.dll
 C:\Projetos\AppHARAS\HARAS_3D87\obj\Debug\net8.0-windows\HARAS_3D87.pdb
 C:\Projetos\AppHARAS\HARAS_3D87\obj\Debug\net8.0-windows\HARAS_3D87.genruntimeconfig.cache
 C:\Projetos\AppHARAS\HARAS_3D87\obj\Debug\net8.0-windows\ref\HARAS_3D87.dll
-C:\Projetos\AppHARAS\HARAS_3D87\obj\Debug\net8.0-windows\HARAS_3D87.Frm_Login.resources

@@ -38,8 +38,10 @@
             BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
             ClientSize = new Size(824, 525);
             Name = "Frm_Menu";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "App HARAS v.1.0";
             WindowState = FormWindowState.Maximized;
+            Load += RACAToolStripMenuItem_Click;
             ResumeLayout(false);
         }
 

@@ -18,7 +18,6 @@ namespace HARAS_3D87
         public Frm_Raca()
         {
             InitializeComponent();
-            this.Load += new EventHandler(FrmRACA_Load);
         }
 
         private void btnEditar_Click(object sender, EventArgs e)

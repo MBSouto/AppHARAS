@@ -15,7 +15,6 @@ namespace HARAS_3D87
         public Frm_Login()
         {
             InitializeComponent();
-            this.Load += new EventHandler(FrmLogin_Load);
         }
         #region Monta a lista de usuários no comboBox
         Camada_Usuarios87 MeuAdapterUsuario = new Camada_Usuarios87();
@@ -37,10 +36,7 @@ namespace HARAS_3D87
         }
         #endregion
 
-        private void btnCancelar_Click(object sender, EventArgs e)
-        {
-            Close();
-        }
+        #region Configuração do botão OK
         private void btnOk_Click(object sender, EventArgs e)
         {
             int iacesso = 0;
@@ -91,7 +87,23 @@ namespace HARAS_3D87
             {
                 MessageBox.Show(ex.Message.ToString());
             }
-        }   
+        }
+        #endregion
+
+        // Configuração da tecla Enter para funcionar como Tab
+        private void FrmLogin_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                SendKeys.Send((e.Shift ? "+" : "") + "{TAB}");
+            }
+        }
+
+        // Configuração do botão Cancelar
+        private void btnCancelar_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
 
         private void Label2_Click(object sender, EventArgs e)
         {

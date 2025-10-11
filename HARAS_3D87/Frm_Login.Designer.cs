@@ -134,8 +134,12 @@
             ClientSize = new Size(800, 450);
             Controls.Add(Group_Barra);
             Controls.Add(Group_Dados);
+            KeyPreview = true;
             Name = "Frm_Login";
-            Text = "Frm_Login";
+            StartPosition = FormStartPosition.CenterScreen;
+            Text = "Login";
+            Load += FrmLogin_Load;
+            KeyDown += FrmLogin_KeyDown;
             Group_Dados.ResumeLayout(false);
             Group_Dados.PerformLayout();
             Group_Barra.ResumeLayout(false);

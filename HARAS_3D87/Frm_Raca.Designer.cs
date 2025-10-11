@@ -317,8 +317,9 @@
             Controls.Add(Group_Dados);
             Controls.Add(Group_Lista);
             Name = "Frm_Raca";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "Raças";
-            Load += label4_Click;
+            Load += FrmRACA_Load;
             Group_Lista.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)dataGridView).EndInit();
             Group_Dados.ResumeLayout(false);
