@@ -67,3 +67,4 @@ C:\Projetos\AppHARAS\HARAS_3D87\obj\Debug\net8.0-windows\refint\HARAS_3D87.dll
 C:\Projetos\AppHARAS\HARAS_3D87\obj\Debug\net8.0-windows\HARAS_3D87.pdb
 C:\Projetos\AppHARAS\HARAS_3D87\obj\Debug\net8.0-windows\HARAS_3D87.genruntimeconfig.cache
 C:\Projetos\AppHARAS\HARAS_3D87\obj\Debug\net8.0-windows\ref\HARAS_3D87.dll
+C:\Projetos\AppHARAS\HARAS_3D87\obj\Debug\net8.0-windows\HARAS_3D87.Frm_Animais.resources

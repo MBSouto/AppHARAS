@@ -24,5 +24,12 @@ namespace HARAS_3D87
             frm.ShowDialog();
             frm.Dispose();
         }
+
+        private void ANIMAISToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Frm_Animais frm = new Frm_Animais();
+            frm.ShowDialog();
+            frm.Dispose();
+        }
     }
 }

@@ -1,64 +1,7 @@
 ﻿namespace HARAS_3D87
 {
-    partial class Frm_Raca : Form
+    partial class Frm_Animais
     {
-        int operacao;
-        int ChaveID;
-
-        // Instancia da camada de dados
-        Camada_Raca87 MeuAdapterRaca = new Camada_Raca87();
-
-        // Metodo para limpar o formulario
-        private void LimparFormulario()
-        {
-            txtRegistro.Clear();
-            txtDescricao.Clear();
-            operacao = 0;
-            ChaveID = 0;
-        }
-
-        private void HabilitarControlesIniciais(bool status)
-        {
-            Group_Lista.Enabled = status;
-            Group_Dados.Enabled = status;
-            habilitarBotoes(status);
-        }
-
-        private void habilitarBotoes(bool status)
-        {
-            btnNovo.Enabled = status;
-            btnEditar.Enabled = status;
-            btnExcluir.Enabled = status;
-            btnSalvar.Enabled = !status;
-            btnCancelar.Enabled = !status;
-        }
-
-        private void MontarLista(string varDescricao)
-        {
-            string Mensagem;
-
-            Mensagem = MeuAdapterRaca.MontarListaRaca(varDescricao);
-
-            // Verifica se ocorreu algum erro e exibe a mensagem
-            if (Mensagem != "") MessageBox.Show(Mensagem, "Erro encontrado: ");
-
-            // Exibe os dados no grid
-            dataGridView.DataSource = MeuAdapterRaca.DtRaca;
-
-            btnEditar.Enabled = dataGridView.Rows.Count > 0;
-            btnExcluir.Enabled = btnEditar.Enabled;
-
-            MostrarRegistro_noForm();
-        }
-
-        private void FrmRACA_Load(object sender, EventArgs e)
-        {
-            HabilitarControlesIniciais(true);
-            LimparFormulario();
-            MontarLista("");
-            txtFiltrar.Focus();
-        }
-
         /// <summary>
         /// Required designer variable.
         /// </summary>
@@ -68,7 +11,6 @@
         /// Clean up any resources being used.
         /// </summary>
         /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
-        ///
         protected override void Dispose(bool disposing)
         {
             if (disposing && (components != null))
@@ -86,15 +28,20 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Frm_Raca));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Frm_Animais));
             Group_Lista = new GroupBox();
-            dataGridView = new DataGridView();
+            dgvTabelaAnimais = new DataGridView();
             Group_Dados = new GroupBox();
-            label4 = new Label();
-            txtDescricao = new TextBox();
-            txtRegistro = new TextBox();
-            txtCadastro = new DateTimePicker();
+            checkBox = new CheckBox();
+            label7 = new Label();
             txtFiltrar = new TextBox();
+            label5 = new Label();
+            txtRaca = new TextBox();
+            label4 = new Label();
+            txtNome = new TextBox();
+            txtValor = new TextBox();
+            txtNascimento = new DateTimePicker();
+            txtNrchip = new TextBox();
             Label2 = new Label();
             Label3 = new Label();
             Label1 = new Label();
@@ -105,7 +52,7 @@
             btnEditar = new Button();
             btnExcluir = new Button();
             Group_Lista.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)dataGridView).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)dgvTabelaAnimais).BeginInit();
             Group_Dados.SuspendLayout();
             Group_Barra.SuspendLayout();
             SuspendLayout();
@@ -113,120 +60,164 @@
             // Group_Lista
             // 
             Group_Lista.BackColor = Color.White;
-            Group_Lista.Controls.Add(dataGridView);
-            Group_Lista.Location = new Point(7, 200);
+            Group_Lista.Controls.Add(dgvTabelaAnimais);
+            Group_Lista.Location = new Point(12, 264);
             Group_Lista.Name = "Group_Lista";
-            Group_Lista.Size = new Size(558, 348);
-            Group_Lista.TabIndex = 0;
+            Group_Lista.Size = new Size(558, 294);
+            Group_Lista.TabIndex = 1;
             Group_Lista.TabStop = false;
             // 
-            // dataGridView
+            // dgvTabelaAnimais
             // 
-            dataGridView.AllowUserToAddRows = false;
-            dataGridView.AllowUserToDeleteRows = false;
-            dataGridView.AllowUserToResizeColumns = false;
-            dataGridView.AllowUserToResizeRows = false;
-            dataGridView.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
-            dataGridView.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView.Location = new Point(6, 13);
-            dataGridView.Name = "dataGridView";
-            dataGridView.ReadOnly = true;
-            dataGridView.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            dataGridView.Size = new Size(546, 329);
-            dataGridView.TabIndex = 0;
-            dataGridView.CellContentClick += dataGridView_CellContentClick;
-            dataGridView.RowEnter += dataGridView_RowEnter;
+            dgvTabelaAnimais.AllowUserToAddRows = false;
+            dgvTabelaAnimais.AllowUserToDeleteRows = false;
+            dgvTabelaAnimais.AllowUserToResizeColumns = false;
+            dgvTabelaAnimais.AllowUserToResizeRows = false;
+            dgvTabelaAnimais.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            dgvTabelaAnimais.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dgvTabelaAnimais.Location = new Point(6, 11);
+            dgvTabelaAnimais.Name = "dgvTabelaAnimais";
+            dgvTabelaAnimais.ReadOnly = true;
+            dgvTabelaAnimais.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+            dgvTabelaAnimais.Size = new Size(546, 277);
+            dgvTabelaAnimais.TabIndex = 0;
             // 
             // Group_Dados
             // 
             Group_Dados.BackColor = Color.White;
-            Group_Dados.Controls.Add(label4);
-            Group_Dados.Controls.Add(txtDescricao);
-            Group_Dados.Controls.Add(txtRegistro);
-            Group_Dados.Controls.Add(txtCadastro);
+            Group_Dados.Controls.Add(checkBox);
+            Group_Dados.Controls.Add(label7);
             Group_Dados.Controls.Add(txtFiltrar);
+            Group_Dados.Controls.Add(label5);
+            Group_Dados.Controls.Add(txtRaca);
+            Group_Dados.Controls.Add(label4);
+            Group_Dados.Controls.Add(txtNome);
+            Group_Dados.Controls.Add(txtValor);
+            Group_Dados.Controls.Add(txtNascimento);
+            Group_Dados.Controls.Add(txtNrchip);
             Group_Dados.Controls.Add(Label2);
             Group_Dados.Controls.Add(Label3);
             Group_Dados.Controls.Add(Label1);
-            Group_Dados.Location = new Point(7, 2);
+            Group_Dados.Location = new Point(12, 12);
             Group_Dados.Name = "Group_Dados";
-            Group_Dados.Size = new Size(558, 205);
-            Group_Dados.TabIndex = 1;
+            Group_Dados.Size = new Size(558, 246);
+            Group_Dados.TabIndex = 2;
             Group_Dados.TabStop = false;
+            // 
+            // checkBox
+            // 
+            checkBox.AutoSize = true;
+            checkBox.Location = new Point(244, 39);
+            checkBox.Name = "checkBox";
+            checkBox.Size = new Size(69, 19);
+            checkBox.TabIndex = 10;
+            checkBox.Text = "Vendido";
+            checkBox.UseVisualStyleBackColor = true;
+            // 
+            // label7
+            // 
+            label7.AutoSize = true;
+            label7.Location = new Point(24, 190);
+            label7.Name = "label7";
+            label7.Size = new Size(60, 15);
+            label7.TabIndex = 9;
+            label7.Text = "Pesquisar:";
+            label7.Click += label7_Click;
+            // 
+            // txtFiltrar
+            // 
+            txtFiltrar.Location = new Point(24, 208);
+            txtFiltrar.Name = "txtFiltrar";
+            txtFiltrar.Size = new Size(509, 23);
+            txtFiltrar.TabIndex = 8;
+            // 
+            // label5
+            // 
+            label5.AutoSize = true;
+            label5.Location = new Point(411, 19);
+            label5.Name = "label5";
+            label5.Size = new Size(36, 15);
+            label5.TabIndex = 5;
+            label5.Text = "Valor:";
+            // 
+            // txtRaca
+            // 
+            txtRaca.Location = new Point(24, 136);
+            txtRaca.Name = "txtRaca";
+            txtRaca.Size = new Size(213, 23);
+            txtRaca.TabIndex = 4;
             // 
             // label4
             // 
             label4.AutoSize = true;
-            label4.Location = new Point(24, 131);
+            label4.Location = new Point(24, 118);
             label4.Name = "label4";
-            label4.Size = new Size(61, 15);
+            label4.Size = new Size(35, 15);
             label4.TabIndex = 3;
-            label4.Text = "Descrição:";
+            label4.Text = "Raça:";
             label4.Click += label4_Click;
             // 
-            // txtDescricao
+            // txtNome
             // 
-            txtDescricao.CharacterCasing = CharacterCasing.Upper;
-            txtDescricao.Location = new Point(24, 149);
-            txtDescricao.Name = "txtDescricao";
-            txtDescricao.Size = new Size(423, 23);
-            txtDescricao.TabIndex = 3;
+            txtNome.CharacterCasing = CharacterCasing.Upper;
+            txtNome.Location = new Point(24, 92);
+            txtNome.Name = "txtNome";
+            txtNome.Size = new Size(509, 23);
+            txtNome.TabIndex = 3;
+            txtNome.TextChanged += txtDescricao_TextChanged;
             // 
-            // txtRegistro
+            // txtValor
             // 
-            txtRegistro.Location = new Point(24, 105);
-            txtRegistro.MaxLength = 6;
-            txtRegistro.Name = "txtRegistro";
-            txtRegistro.Size = new Size(127, 23);
-            txtRegistro.TabIndex = 1;
-            txtRegistro.TextAlign = HorizontalAlignment.Right;
-            txtRegistro.TextChanged += txtRegistro_TextChanged;
-            txtRegistro.KeyPress += txtRegistro_KeyPress;
+            txtValor.Location = new Point(411, 37);
+            txtValor.MaxLength = 6;
+            txtValor.Name = "txtValor";
+            txtValor.Size = new Size(122, 23);
+            txtValor.TabIndex = 1;
+            txtValor.TextAlign = HorizontalAlignment.Right;
             // 
-            // txtCadastro
+            // txtNascimento
             // 
-            txtCadastro.Format = DateTimePickerFormat.Short;
-            txtCadastro.Location = new Point(285, 105);
-            txtCadastro.Name = "txtCadastro";
-            txtCadastro.Size = new Size(162, 23);
-            txtCadastro.TabIndex = 2;
+            txtNascimento.Format = DateTimePickerFormat.Short;
+            txtNascimento.Location = new Point(371, 136);
+            txtNascimento.Name = "txtNascimento";
+            txtNascimento.Size = new Size(162, 23);
+            txtNascimento.TabIndex = 2;
             // 
-            // txtFiltrar
+            // txtNrchip
             // 
-            txtFiltrar.Location = new Point(24, 37);
-            txtFiltrar.Name = "txtFiltrar";
-            txtFiltrar.Size = new Size(423, 23);
-            txtFiltrar.TabIndex = 0;
-            txtFiltrar.TextChanged += txtFiltrar_TextChanged;
+            txtNrchip.Location = new Point(24, 37);
+            txtNrchip.Name = "txtNrchip";
+            txtNrchip.Size = new Size(127, 23);
+            txtNrchip.TabIndex = 0;
             // 
             // Label2
             // 
             Label2.AutoSize = true;
-            Label2.Location = new Point(24, 87);
+            Label2.Location = new Point(24, 74);
             Label2.Name = "Label2";
-            Label2.Size = new Size(53, 15);
+            Label2.Size = new Size(43, 15);
             Label2.TabIndex = 1;
-            Label2.Text = "Registro:";
+            Label2.Text = "Nome:";
             Label2.Click += Label2_Click;
             // 
             // Label3
             // 
             Label3.AutoSize = true;
-            Label3.Location = new Point(285, 87);
+            Label3.Location = new Point(371, 118);
             Label3.Name = "Label3";
-            Label3.Size = new Size(153, 15);
+            Label3.Size = new Size(74, 15);
             Label3.TabIndex = 2;
-            Label3.Text = "Data Cadastro/ Atualização:";
+            Label3.Text = "Nascimento:";
             // 
             // Label1
             // 
             Label1.AutoSize = true;
             Label1.Location = new Point(24, 19);
             Label1.Name = "Label1";
-            Label1.Size = new Size(94, 15);
+            Label1.Size = new Size(52, 15);
             Label1.TabIndex = 0;
-            Label1.Text = "Filtrar Descrição:";
-            Label1.Click += label1_Click;
+            Label1.Text = "Nº Chip:";
+            Label1.Click += Label1_Click;
             // 
             // Group_Barra
             // 
@@ -236,10 +227,10 @@
             Group_Barra.Controls.Add(btnSalvar);
             Group_Barra.Controls.Add(btnEditar);
             Group_Barra.Controls.Add(btnExcluir);
-            Group_Barra.Location = new Point(571, 2);
+            Group_Barra.Location = new Point(576, 12);
             Group_Barra.Name = "Group_Barra";
             Group_Barra.Size = new Size(92, 546);
-            Group_Barra.TabIndex = 2;
+            Group_Barra.TabIndex = 3;
             Group_Barra.TabStop = false;
             // 
             // btnCancelar
@@ -256,7 +247,6 @@
             btnCancelar.Size = new Size(48, 48);
             btnCancelar.TabIndex = 4;
             btnCancelar.UseVisualStyleBackColor = false;
-            btnCancelar.Click += btnCancelar_Click;
             // 
             // btnNovo
             // 
@@ -272,7 +262,6 @@
             btnNovo.Size = new Size(48, 48);
             btnNovo.TabIndex = 0;
             btnNovo.UseVisualStyleBackColor = false;
-            btnNovo.Click += btnNovo_Click;
             // 
             // btnSalvar
             // 
@@ -288,7 +277,6 @@
             btnSalvar.Size = new Size(48, 48);
             btnSalvar.TabIndex = 4;
             btnSalvar.UseVisualStyleBackColor = false;
-            btnSalvar.Click += btnSalvar_Click;
             // 
             // btnEditar
             // 
@@ -304,7 +292,6 @@
             btnEditar.Size = new Size(48, 48);
             btnEditar.TabIndex = 2;
             btnEditar.UseVisualStyleBackColor = false;
-            btnEditar.Click += btnEditar_Click;
             // 
             // btnExcluir
             // 
@@ -320,23 +307,21 @@
             btnExcluir.Size = new Size(48, 48);
             btnExcluir.TabIndex = 3;
             btnExcluir.UseVisualStyleBackColor = false;
-            btnExcluir.Click += btnExcluir_Click;
             // 
-            // Frm_Raca
+            // Frm_Animais
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
-            ClientSize = new Size(671, 555);
+            ClientSize = new Size(677, 566);
             Controls.Add(Group_Barra);
             Controls.Add(Group_Dados);
             Controls.Add(Group_Lista);
-            Name = "Frm_Raca";
+            Name = "Frm_Animais";
             StartPosition = FormStartPosition.CenterScreen;
-            Text = "Raças";
-            Load += FrmRACA_Load;
+            Text = "Animais";
             Group_Lista.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)dataGridView).EndInit();
+            ((System.ComponentModel.ISupportInitialize)dgvTabelaAnimais).EndInit();
             Group_Dados.ResumeLayout(false);
             Group_Dados.PerformLayout();
             Group_Barra.ResumeLayout(false);
@@ -346,21 +331,26 @@
         #endregion
 
         private GroupBox Group_Lista;
+        private DataGridView dgvTabelaAnimais;
         private GroupBox Group_Dados;
-        private GroupBox Group_Barra;
-        private Button btnNovo;
-        private Button btnEditar;
-        private Button btnSalvar;
-        private Button btnCancelar;
-        private Button btnExcluir;
-        private Label Label1;
-        private DateTimePicker txtCadastro;
-        private TextBox txtFiltrar;
+        private Label label4;
+        private TextBox txtNome;
+        private TextBox txtValor;
+        private DateTimePicker txtNascimento;
+        private TextBox txtNrchip;
         private Label Label2;
         private Label Label3;
-        private TextBox txtRegistro;
-        private Label label4;
-        private TextBox txtDescricao;
-        private DataGridView dataGridView;
+        private Label Label1;
+        private GroupBox Group_Barra;
+        private Button btnCancelar;
+        private Button btnNovo;
+        private Button btnSalvar;
+        private Button btnEditar;
+        private Button btnExcluir;
+        private TextBox txtRaca;
+        private Label label5;
+        private Label label7;
+        private TextBox txtFiltrar;
+        private CheckBox checkBox;
     }
 }
