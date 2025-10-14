@@ -99,10 +99,10 @@
             Label3 = new Label();
             Label1 = new Label();
             Group_Barra = new GroupBox();
-            btnSalvar = new Button();
-            btnNovo = new Button();
-            btnEditar = new Button();
             btnCancelar = new Button();
+            btnNovo = new Button();
+            btnSalvar = new Button();
+            btnEditar = new Button();
             btnExcluir = new Button();
             Group_Lista.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridView).BeginInit();
@@ -112,10 +112,11 @@
             // 
             // Group_Lista
             // 
+            Group_Lista.BackColor = Color.White;
             Group_Lista.Controls.Add(dataGridView);
-            Group_Lista.Location = new Point(12, 12);
+            Group_Lista.Location = new Point(7, 12);
             Group_Lista.Name = "Group_Lista";
-            Group_Lista.Size = new Size(776, 232);
+            Group_Lista.Size = new Size(558, 348);
             Group_Lista.TabIndex = 0;
             Group_Lista.TabStop = false;
             // 
@@ -125,18 +126,20 @@
             dataGridView.AllowUserToDeleteRows = false;
             dataGridView.AllowUserToResizeColumns = false;
             dataGridView.AllowUserToResizeRows = false;
+            dataGridView.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dataGridView.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridView.Location = new Point(6, 13);
             dataGridView.Name = "dataGridView";
             dataGridView.ReadOnly = true;
             dataGridView.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            dataGridView.Size = new Size(764, 213);
+            dataGridView.Size = new Size(546, 329);
             dataGridView.TabIndex = 0;
             dataGridView.CellContentClick += dataGridView_CellContentClick;
             dataGridView.RowEnter += dataGridView_RowEnter;
             // 
             // Group_Dados
             // 
+            Group_Dados.BackColor = Color.White;
             Group_Dados.Controls.Add(label4);
             Group_Dados.Controls.Add(txtDescricao);
             Group_Dados.Controls.Add(txtRegistro);
@@ -145,37 +148,37 @@
             Group_Dados.Controls.Add(Label2);
             Group_Dados.Controls.Add(Label3);
             Group_Dados.Controls.Add(Label1);
-            Group_Dados.Location = new Point(12, 238);
+            Group_Dados.Location = new Point(7, 366);
             Group_Dados.Name = "Group_Dados";
-            Group_Dados.Size = new Size(776, 138);
+            Group_Dados.Size = new Size(558, 182);
             Group_Dados.TabIndex = 1;
             Group_Dados.TabStop = false;
             // 
             // label4
             // 
             label4.AutoSize = true;
-            label4.Location = new Point(6, 100);
+            label4.Location = new Point(24, 131);
             label4.Name = "label4";
             label4.Size = new Size(61, 15);
-            label4.TabIndex = 7;
+            label4.TabIndex = 3;
             label4.Text = "Descrição:";
             label4.Click += label4_Click;
             // 
             // txtDescricao
             // 
             txtDescricao.CharacterCasing = CharacterCasing.Upper;
-            txtDescricao.Location = new Point(73, 97);
+            txtDescricao.Location = new Point(24, 149);
             txtDescricao.Name = "txtDescricao";
-            txtDescricao.Size = new Size(687, 23);
-            txtDescricao.TabIndex = 6;
+            txtDescricao.Size = new Size(423, 23);
+            txtDescricao.TabIndex = 3;
             // 
             // txtRegistro
             // 
-            txtRegistro.Location = new Point(73, 68);
+            txtRegistro.Location = new Point(24, 105);
             txtRegistro.MaxLength = 6;
             txtRegistro.Name = "txtRegistro";
             txtRegistro.Size = new Size(127, 23);
-            txtRegistro.TabIndex = 5;
+            txtRegistro.TabIndex = 1;
             txtRegistro.TextAlign = HorizontalAlignment.Right;
             txtRegistro.TextChanged += txtRegistro_TextChanged;
             txtRegistro.KeyPress += txtRegistro_KeyPress;
@@ -183,42 +186,42 @@
             // txtCadastro
             // 
             txtCadastro.Format = DateTimePickerFormat.Short;
-            txtCadastro.Location = new Point(560, 68);
+            txtCadastro.Location = new Point(285, 105);
             txtCadastro.Name = "txtCadastro";
-            txtCadastro.Size = new Size(200, 23);
-            txtCadastro.TabIndex = 4;
+            txtCadastro.Size = new Size(162, 23);
+            txtCadastro.TabIndex = 2;
             // 
             // txtFiltrar
             // 
-            txtFiltrar.Location = new Point(106, 19);
+            txtFiltrar.Location = new Point(24, 37);
             txtFiltrar.Name = "txtFiltrar";
-            txtFiltrar.Size = new Size(654, 23);
-            txtFiltrar.TabIndex = 3;
+            txtFiltrar.Size = new Size(423, 23);
+            txtFiltrar.TabIndex = 0;
             txtFiltrar.TextChanged += txtFiltrar_TextChanged;
             // 
             // Label2
             // 
             Label2.AutoSize = true;
-            Label2.Location = new Point(6, 71);
+            Label2.Location = new Point(24, 87);
             Label2.Name = "Label2";
             Label2.Size = new Size(53, 15);
-            Label2.TabIndex = 2;
+            Label2.TabIndex = 1;
             Label2.Text = "Registro:";
             Label2.Click += Label2_Click;
             // 
             // Label3
             // 
             Label3.AutoSize = true;
-            Label3.Location = new Point(401, 71);
+            Label3.Location = new Point(285, 87);
             Label3.Name = "Label3";
             Label3.Size = new Size(153, 15);
-            Label3.TabIndex = 1;
+            Label3.TabIndex = 2;
             Label3.Text = "Data Cadastro/ Atualização:";
             // 
             // Label1
             // 
             Label1.AutoSize = true;
-            Label1.Location = new Point(6, 22);
+            Label1.Location = new Point(24, 19);
             Label1.Name = "Label1";
             Label1.Size = new Size(94, 15);
             Label1.TabIndex = 0;
@@ -227,92 +230,104 @@
             // 
             // Group_Barra
             // 
-            Group_Barra.Controls.Add(btnSalvar);
-            Group_Barra.Controls.Add(btnNovo);
-            Group_Barra.Controls.Add(btnEditar);
+            Group_Barra.BackColor = Color.White;
             Group_Barra.Controls.Add(btnCancelar);
+            Group_Barra.Controls.Add(btnNovo);
+            Group_Barra.Controls.Add(btnSalvar);
+            Group_Barra.Controls.Add(btnEditar);
             Group_Barra.Controls.Add(btnExcluir);
-            Group_Barra.Location = new Point(12, 369);
+            Group_Barra.Location = new Point(571, 12);
             Group_Barra.Name = "Group_Barra";
-            Group_Barra.Size = new Size(776, 82);
+            Group_Barra.Size = new Size(92, 536);
             Group_Barra.TabIndex = 2;
             Group_Barra.TabStop = false;
             // 
-            // btnSalvar
+            // btnCancelar
             // 
-            btnSalvar.FlatAppearance.BorderColor = Color.White;
-            btnSalvar.FlatAppearance.BorderSize = 2;
-            btnSalvar.FlatAppearance.MouseDownBackColor = Color.White;
-            btnSalvar.FlatAppearance.MouseOverBackColor = Color.Black;
-            btnSalvar.Image = (Image)resources.GetObject("btnSalvar.Image");
-            btnSalvar.Location = new Point(592, 13);
-            btnSalvar.Name = "btnSalvar";
-            btnSalvar.Size = new Size(81, 56);
-            btnSalvar.TabIndex = 5;
-            btnSalvar.UseVisualStyleBackColor = true;
-            btnSalvar.Click += btnSalvar_Click;
+            btnCancelar.BackColor = Color.Transparent;
+            btnCancelar.FlatAppearance.BorderColor = Color.White;
+            btnCancelar.FlatAppearance.BorderSize = 0;
+            btnCancelar.FlatAppearance.MouseDownBackColor = Color.White;
+            btnCancelar.FlatAppearance.MouseOverBackColor = Color.Black;
+            btnCancelar.FlatStyle = FlatStyle.Flat;
+            btnCancelar.Image = (Image)resources.GetObject("btnCancelar.Image");
+            btnCancelar.Location = new Point(22, 478);
+            btnCancelar.Name = "btnCancelar";
+            btnCancelar.Size = new Size(48, 48);
+            btnCancelar.TabIndex = 4;
+            btnCancelar.UseVisualStyleBackColor = false;
+            btnCancelar.Click += btnCancelar_Click;
             // 
             // btnNovo
             // 
+            btnNovo.BackColor = Color.Transparent;
             btnNovo.FlatAppearance.BorderColor = Color.White;
-            btnNovo.FlatAppearance.BorderSize = 2;
+            btnNovo.FlatAppearance.BorderSize = 0;
             btnNovo.FlatAppearance.MouseDownBackColor = Color.White;
             btnNovo.FlatAppearance.MouseOverBackColor = Color.Black;
+            btnNovo.FlatStyle = FlatStyle.Flat;
             btnNovo.Image = (Image)resources.GetObject("btnNovo.Image");
-            btnNovo.Location = new Point(331, 13);
+            btnNovo.Location = new Point(22, 22);
             btnNovo.Name = "btnNovo";
-            btnNovo.Size = new Size(81, 56);
-            btnNovo.TabIndex = 7;
-            btnNovo.UseVisualStyleBackColor = true;
+            btnNovo.Size = new Size(48, 48);
+            btnNovo.TabIndex = 0;
+            btnNovo.UseVisualStyleBackColor = false;
             btnNovo.Click += btnNovo_Click;
+            // 
+            // btnSalvar
+            // 
+            btnSalvar.BackColor = Color.Transparent;
+            btnSalvar.FlatAppearance.BorderColor = Color.White;
+            btnSalvar.FlatAppearance.BorderSize = 0;
+            btnSalvar.FlatAppearance.MouseDownBackColor = Color.White;
+            btnSalvar.FlatAppearance.MouseOverBackColor = Color.Black;
+            btnSalvar.FlatStyle = FlatStyle.Flat;
+            btnSalvar.Image = (Image)resources.GetObject("btnSalvar.Image");
+            btnSalvar.Location = new Point(22, 280);
+            btnSalvar.Name = "btnSalvar";
+            btnSalvar.Size = new Size(48, 48);
+            btnSalvar.TabIndex = 4;
+            btnSalvar.UseVisualStyleBackColor = false;
+            btnSalvar.Click += btnSalvar_Click;
             // 
             // btnEditar
             // 
+            btnEditar.BackColor = Color.Transparent;
             btnEditar.FlatAppearance.BorderColor = Color.White;
-            btnEditar.FlatAppearance.BorderSize = 2;
+            btnEditar.FlatAppearance.BorderSize = 0;
             btnEditar.FlatAppearance.MouseDownBackColor = Color.White;
             btnEditar.FlatAppearance.MouseOverBackColor = Color.Black;
+            btnEditar.FlatStyle = FlatStyle.Flat;
             btnEditar.Image = (Image)resources.GetObject("btnEditar.Image");
-            btnEditar.Location = new Point(418, 13);
+            btnEditar.Location = new Point(22, 111);
             btnEditar.Name = "btnEditar";
-            btnEditar.Size = new Size(81, 56);
-            btnEditar.TabIndex = 6;
-            btnEditar.UseVisualStyleBackColor = true;
+            btnEditar.Size = new Size(48, 48);
+            btnEditar.TabIndex = 2;
+            btnEditar.UseVisualStyleBackColor = false;
             btnEditar.Click += btnEditar_Click;
-            // 
-            // btnCancelar
-            // 
-            btnCancelar.FlatAppearance.BorderColor = Color.White;
-            btnCancelar.FlatAppearance.BorderSize = 2;
-            btnCancelar.FlatAppearance.MouseDownBackColor = Color.White;
-            btnCancelar.FlatAppearance.MouseOverBackColor = Color.Black;
-            btnCancelar.Image = (Image)resources.GetObject("btnCancelar.Image");
-            btnCancelar.Location = new Point(679, 13);
-            btnCancelar.Name = "btnCancelar";
-            btnCancelar.Size = new Size(81, 56);
-            btnCancelar.TabIndex = 4;
-            btnCancelar.UseVisualStyleBackColor = true;
-            btnCancelar.Click += btnCancelar_Click;
             // 
             // btnExcluir
             // 
+            btnExcluir.BackColor = Color.Transparent;
             btnExcluir.FlatAppearance.BorderColor = Color.White;
-            btnExcluir.FlatAppearance.BorderSize = 2;
+            btnExcluir.FlatAppearance.BorderSize = 0;
             btnExcluir.FlatAppearance.MouseDownBackColor = Color.White;
             btnExcluir.FlatAppearance.MouseOverBackColor = Color.Black;
+            btnExcluir.FlatStyle = FlatStyle.Flat;
             btnExcluir.Image = (Image)resources.GetObject("btnExcluir.Image");
-            btnExcluir.Location = new Point(505, 13);
+            btnExcluir.Location = new Point(22, 195);
             btnExcluir.Name = "btnExcluir";
-            btnExcluir.Size = new Size(81, 56);
+            btnExcluir.Size = new Size(48, 48);
             btnExcluir.TabIndex = 3;
-            btnExcluir.UseVisualStyleBackColor = true;
+            btnExcluir.UseVisualStyleBackColor = false;
             btnExcluir.Click += btnExcluir_Click;
             // 
             // Frm_Raca
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
+            BackColor = Color.White;
+            ClientSize = new Size(672, 568);
             Controls.Add(Group_Barra);
             Controls.Add(Group_Dados);
             Controls.Add(Group_Lista);

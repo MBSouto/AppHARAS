@@ -96,6 +96,9 @@ namespace HARAS_3D87
                     Dr.Read(); //Ler o registro encontrado
                     iAcesso_usuario = Convert.ToInt32(Dr["ACESSO"].ToString()); //Pegar o valor do parâmetro de saída
                     msg = "Usuário Localizado";
+
+                    if (iAcesso_usuario == 0)
+                        msg = "Usuário sem permissão de acesso!";
                 }
                 else
                 {

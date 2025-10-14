@@ -29,7 +29,55 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Frm_Menu));
+            menuStrip1 = new MenuStrip();
+            toolStripMenuItem = new ToolStripMenuItem();
+            raçasToolStripMenuItem = new ToolStripMenuItem();
+            animaisToolStripMenuItem = new ToolStripMenuItem();
+            ajudaToolStripMenuItem = new ToolStripMenuItem();
+            sairToolStripMenuItem = new ToolStripMenuItem();
+            menuStrip1.SuspendLayout();
             SuspendLayout();
+            // 
+            // menuStrip1
+            // 
+            menuStrip1.Items.AddRange(new ToolStripItem[] { toolStripMenuItem, ajudaToolStripMenuItem, sairToolStripMenuItem });
+            menuStrip1.Location = new Point(0, 0);
+            menuStrip1.Name = "menuStrip1";
+            menuStrip1.Size = new Size(824, 24);
+            menuStrip1.TabIndex = 0;
+            menuStrip1.Text = "menuStrip1";
+            // 
+            // toolStripMenuItem
+            // 
+            toolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { raçasToolStripMenuItem, animaisToolStripMenuItem });
+            toolStripMenuItem.Name = "toolStripMenuItem";
+            toolStripMenuItem.Size = new Size(66, 20);
+            toolStripMenuItem.Text = "Arquivos";
+            // 
+            // raçasToolStripMenuItem
+            // 
+            raçasToolStripMenuItem.Name = "raçasToolStripMenuItem";
+            raçasToolStripMenuItem.Size = new Size(180, 22);
+            raçasToolStripMenuItem.Text = "Raças";
+            raçasToolStripMenuItem.Click += RACAToolStripMenuItem_Click;
+            // 
+            // animaisToolStripMenuItem
+            // 
+            animaisToolStripMenuItem.Name = "animaisToolStripMenuItem";
+            animaisToolStripMenuItem.Size = new Size(180, 22);
+            animaisToolStripMenuItem.Text = "Animais";
+            // 
+            // ajudaToolStripMenuItem
+            // 
+            ajudaToolStripMenuItem.Name = "ajudaToolStripMenuItem";
+            ajudaToolStripMenuItem.Size = new Size(50, 20);
+            ajudaToolStripMenuItem.Text = "Ajuda";
+            // 
+            // sairToolStripMenuItem
+            // 
+            sairToolStripMenuItem.Name = "sairToolStripMenuItem";
+            sairToolStripMenuItem.Size = new Size(38, 20);
+            sairToolStripMenuItem.Text = "Sair";
             // 
             // Frm_Menu
             // 
@@ -37,14 +85,25 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
             ClientSize = new Size(824, 525);
+            Controls.Add(menuStrip1);
+            MainMenuStrip = menuStrip1;
             Name = "Frm_Menu";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "App HARAS v.1.0";
             WindowState = FormWindowState.Maximized;
-            Load += RACAToolStripMenuItem_Click;
+            menuStrip1.ResumeLayout(false);
+            menuStrip1.PerformLayout();
             ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
+
+        private MenuStrip menuStrip1;
+        private ToolStripMenuItem toolStripMenuItem;
+        private ToolStripMenuItem raçasToolStripMenuItem;
+        private ToolStripMenuItem animaisToolStripMenuItem;
+        private ToolStripMenuItem ajudaToolStripMenuItem;
+        private ToolStripMenuItem sairToolStripMenuItem;
     }
 }

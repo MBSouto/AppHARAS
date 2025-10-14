@@ -20,6 +20,13 @@
             base.Dispose(disposing);
         }
 
+        private void FrmLogin_Resize(object sender, EventArgs e)
+        {
+            Group_Dados.Left = (this.ClientSize.Width - Group_Dados.Width) / 2;
+            Group_Dados.Top = (this.ClientSize.Height - Group_Dados.Height) / 2;
+        }
+
+
         #region Windows Form Designer generated code
 
         /// <summary>
@@ -29,75 +36,52 @@
         private void InitializeComponent()
         {
             Group_Dados = new GroupBox();
+            label2 = new Label();
+            label1 = new Label();
+            btnOK = new Button();
             CmbNome = new ComboBox();
+            btnCancelar = new Button();
             txtSenha = new TextBox();
             label = new Label();
             txtNome = new Label();
-            Group_Barra = new GroupBox();
-            btnOK = new Button();
-            btnCancelar = new Button();
             Group_Dados.SuspendLayout();
-            Group_Barra.SuspendLayout();
             SuspendLayout();
             // 
             // Group_Dados
             // 
+            Group_Dados.Controls.Add(label2);
+            Group_Dados.Controls.Add(label1);
+            Group_Dados.Controls.Add(btnOK);
             Group_Dados.Controls.Add(CmbNome);
+            Group_Dados.Controls.Add(btnCancelar);
             Group_Dados.Controls.Add(txtSenha);
             Group_Dados.Controls.Add(label);
             Group_Dados.Controls.Add(txtNome);
-            Group_Dados.Location = new Point(12, 156);
+            Group_Dados.Location = new Point(12, 12);
             Group_Dados.Name = "Group_Dados";
-            Group_Dados.Size = new Size(776, 138);
-            Group_Dados.TabIndex = 2;
+            Group_Dados.Size = new Size(376, 294);
+            Group_Dados.TabIndex = 0;
             Group_Dados.TabStop = false;
             // 
-            // CmbNome
+            // label2
             // 
-            CmbNome.FormattingEnabled = true;
-            CmbNome.Location = new Point(331, 38);
-            CmbNome.Name = "CmbNome";
-            CmbNome.Size = new Size(210, 23);
-            CmbNome.TabIndex = 6;
+            label2.AutoSize = true;
+            label2.Location = new Point(38, 69);
+            label2.Name = "label2";
+            label2.Size = new Size(307, 15);
+            label2.TabIndex = 9;
+            label2.Text = "____________________________________________________________";
             // 
-            // txtSenha
+            // label1
             // 
-            txtSenha.Location = new Point(331, 77);
-            txtSenha.MaxLength = 6;
-            txtSenha.Name = "txtSenha";
-            txtSenha.PasswordChar = '*';
-            txtSenha.Size = new Size(210, 23);
-            txtSenha.TabIndex = 5;
-            txtSenha.TextAlign = HorizontalAlignment.Right;
-            // 
-            // label
-            // 
-            label.AutoSize = true;
-            label.Location = new Point(264, 80);
-            label.Name = "label";
-            label.Size = new Size(42, 15);
-            label.TabIndex = 2;
-            label.Text = "Senha:";
-            label.Click += Label2_Click;
-            // 
-            // txtNome
-            // 
-            txtNome.AutoSize = true;
-            txtNome.Location = new Point(264, 41);
-            txtNome.Name = "txtNome";
-            txtNome.Size = new Size(43, 15);
-            txtNome.TabIndex = 0;
-            txtNome.Text = "Nome:";
-            // 
-            // Group_Barra
-            // 
-            Group_Barra.Controls.Add(btnOK);
-            Group_Barra.Controls.Add(btnCancelar);
-            Group_Barra.Location = new Point(12, 300);
-            Group_Barra.Name = "Group_Barra";
-            Group_Barra.Size = new Size(776, 82);
-            Group_Barra.TabIndex = 3;
-            Group_Barra.TabStop = false;
+            label1.AutoSize = true;
+            label1.Font = new Font("Segoe UI Symbol", 27.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label1.ForeColor = Color.FromArgb(0, 64, 0);
+            label1.Location = new Point(132, 19);
+            label1.Name = "label1";
+            label1.Size = new Size(118, 50);
+            label1.TabIndex = 0;
+            label1.Text = "Login";
             // 
             // btnOK
             // 
@@ -105,13 +89,22 @@
             btnOK.FlatAppearance.BorderSize = 2;
             btnOK.FlatAppearance.MouseDownBackColor = Color.White;
             btnOK.FlatAppearance.MouseOverBackColor = Color.Black;
-            btnOK.Location = new Point(331, 13);
+            btnOK.Location = new Point(81, 237);
             btnOK.Name = "btnOK";
-            btnOK.Size = new Size(81, 56);
-            btnOK.TabIndex = 7;
-            btnOK.Text = "OK!";
+            btnOK.Size = new Size(104, 24);
+            btnOK.TabIndex = 3;
+            btnOK.Text = "OK";
             btnOK.UseVisualStyleBackColor = true;
             btnOK.Click += btnOk_Click;
+            // 
+            // CmbNome
+            // 
+            CmbNome.FormattingEnabled = true;
+            CmbNome.Location = new Point(81, 122);
+            CmbNome.Name = "CmbNome";
+            CmbNome.Size = new Size(228, 23);
+            CmbNome.TabIndex = 1;
+            CmbNome.SelectedIndexChanged += CmbNome_SelectedIndexChanged;
             // 
             // btnCancelar
             // 
@@ -119,30 +112,57 @@
             btnCancelar.FlatAppearance.BorderSize = 2;
             btnCancelar.FlatAppearance.MouseDownBackColor = Color.White;
             btnCancelar.FlatAppearance.MouseOverBackColor = Color.Black;
-            btnCancelar.Location = new Point(461, 13);
+            btnCancelar.Location = new Point(205, 237);
             btnCancelar.Name = "btnCancelar";
-            btnCancelar.Size = new Size(81, 56);
+            btnCancelar.Size = new Size(104, 24);
             btnCancelar.TabIndex = 4;
             btnCancelar.Text = "Cancelar";
             btnCancelar.UseVisualStyleBackColor = true;
             btnCancelar.Click += btnCancelar_Click;
             // 
+            // txtSenha
+            // 
+            txtSenha.Location = new Point(81, 175);
+            txtSenha.MaxLength = 6;
+            txtSenha.Name = "txtSenha";
+            txtSenha.PasswordChar = '*';
+            txtSenha.Size = new Size(228, 23);
+            txtSenha.TabIndex = 2;
+            txtSenha.TextAlign = HorizontalAlignment.Right;
+            // 
+            // label
+            // 
+            label.AutoSize = true;
+            label.Location = new Point(82, 157);
+            label.Name = "label";
+            label.Size = new Size(42, 15);
+            label.TabIndex = 0;
+            label.Text = "Senha:";
+            label.Click += Label2_Click;
+            // 
+            // txtNome
+            // 
+            txtNome.AutoSize = true;
+            txtNome.Location = new Point(81, 104);
+            txtNome.Name = "txtNome";
+            txtNome.Size = new Size(43, 15);
+            txtNome.TabIndex = 0;
+            txtNome.Text = "Nome:";
+            // 
             // Frm_Login
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
-            Controls.Add(Group_Barra);
+            ClientSize = new Size(397, 318);
             Controls.Add(Group_Dados);
             KeyPreview = true;
             Name = "Frm_Login";
             StartPosition = FormStartPosition.CenterScreen;
-            Text = "Login";
+            Text = "AppHARAS v1.0";
             Load += FrmLogin_Load;
             KeyDown += FrmLogin_KeyDown;
             Group_Dados.ResumeLayout(false);
             Group_Dados.PerformLayout();
-            Group_Barra.ResumeLayout(false);
             ResumeLayout(false);
         }
 
@@ -152,12 +172,10 @@
         private TextBox txtSenha;
         private Label label;
         private Label txtNome;
-        private GroupBox Group_Barra;
-        private Button btnSalvar;
-        private Button btnOK;
-        private Button btnEditar;
-        private Button btnCancelar;
-        private Button btnExcluir;
         private ComboBox CmbNome;
+        private Button btnCancelar;
+        private Button btnOK;
+        private Label label1;
+        private Label label2;
     }
 }

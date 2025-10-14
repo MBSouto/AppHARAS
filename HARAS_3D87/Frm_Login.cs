@@ -15,6 +15,7 @@ namespace HARAS_3D87
         public Frm_Login()
         {
             InitializeComponent();
+            this.Resize += FrmLogin_Resize;
         }
         #region Monta a lista de usuários no comboBox
         Camada_Usuarios87 MeuAdapterUsuario = new Camada_Usuarios87();
@@ -62,25 +63,24 @@ namespace HARAS_3D87
 
                 //Se ocorrer erro exibi-lo
                 if (Mensagem != "")
-                    MessageBox.Show(Mensagem, "Erro encontrado:");
-                    iacesso = MeuAdapterUsuario.iAcesso_usuario; //Receber o nível de acesso do usuário
+                    MessageBox.Show(Mensagem, "Atenção:");
+                iacesso = MeuAdapterUsuario.iAcesso_usuario; //Receber o nível de acesso do usuário
 
                 // Se o nível de acesso for diferente de zero, liberar o acesso
                 if (iacesso != 0)
                 {
-                    MessageBox.Show("Seja Bem Vindo " + CmbNome.Text + " Acesso Liberado"); 
-                    Frm_Menu FM = new Frm_Menu(); 
+                    MessageBox.Show("Seja Bem Vindo " + CmbNome.Text + " Acesso Liberado");
+                    Frm_Menu FM = new Frm_Menu();
 
                     //Definir o nível de acesso do usuário no formulário principal
-                    Hide(); 
-                    FM.ShowDialog();
+                    Hide();
+                    FM.ShowDialog(); //Exibir o formulário Menu
                     Application.Exit();
                 }
                 // Se o nível de acesso for igual a zero, negar o acesso
                 else
                 {
-                    MessageBox.Show("Usuário ou Senha inválidos");
-                    Application.Exit();
+                    txtSenha.Clear();
                 }
             }
             catch (Exception ex)
@@ -106,6 +106,11 @@ namespace HARAS_3D87
         }
 
         private void Label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void CmbNome_SelectedIndexChanged(object sender, EventArgs e)
         {
 
         }

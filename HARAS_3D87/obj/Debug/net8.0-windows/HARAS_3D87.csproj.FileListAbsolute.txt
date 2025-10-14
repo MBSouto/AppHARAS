@@ -1,7 +1,10 @@
 C:\Projetos\AppHARAS\HARAS_3D87\bin\Debug\net8.0-windows\HARAS_3D87.exe
+C:\Projetos\AppHARAS\HARAS_3D87\bin\Debug\net8.0-windows\HARAS_3D87.dll
+C:\Projetos\AppHARAS\HARAS_3D87\bin\Debug\net8.0-windows\Microsoft.SqlServer.Server.dll
+C:\Projetos\AppHARAS\HARAS_3D87\bin\Debug\net8.0-windows\runtimes\win\lib\net8.0\Microsoft.Data.SqlClient.dll
+C:\Projetos\AppHARAS\HARAS_3D87\bin\Debug\net8.0-windows\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.dll
 C:\Projetos\AppHARAS\HARAS_3D87\bin\Debug\net8.0-windows\HARAS_3D87.deps.json
 C:\Projetos\AppHARAS\HARAS_3D87\bin\Debug\net8.0-windows\HARAS_3D87.runtimeconfig.json
-C:\Projetos\AppHARAS\HARAS_3D87\bin\Debug\net8.0-windows\HARAS_3D87.dll
 C:\Projetos\AppHARAS\HARAS_3D87\bin\Debug\net8.0-windows\HARAS_3D87.pdb
 C:\Projetos\AppHARAS\HARAS_3D87\bin\Debug\net8.0-windows\Azure.Core.dll
 C:\Projetos\AppHARAS\HARAS_3D87\bin\Debug\net8.0-windows\Azure.Identity.dll
@@ -22,7 +25,6 @@ C:\Projetos\AppHARAS\HARAS_3D87\bin\Debug\net8.0-windows\Microsoft.IdentityModel
 C:\Projetos\AppHARAS\HARAS_3D87\bin\Debug\net8.0-windows\Microsoft.IdentityModel.Protocols.dll
 C:\Projetos\AppHARAS\HARAS_3D87\bin\Debug\net8.0-windows\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
 C:\Projetos\AppHARAS\HARAS_3D87\bin\Debug\net8.0-windows\Microsoft.IdentityModel.Tokens.dll
-C:\Projetos\AppHARAS\HARAS_3D87\bin\Debug\net8.0-windows\Microsoft.SqlServer.Server.dll
 C:\Projetos\AppHARAS\HARAS_3D87\bin\Debug\net8.0-windows\System.ClientModel.dll
 C:\Projetos\AppHARAS\HARAS_3D87\bin\Debug\net8.0-windows\System.Configuration.ConfigurationManager.dll
 C:\Projetos\AppHARAS\HARAS_3D87\bin\Debug\net8.0-windows\System.Diagnostics.EventLog.dll
@@ -43,9 +45,7 @@ C:\Projetos\AppHARAS\HARAS_3D87\bin\Debug\net8.0-windows\tr\Microsoft.Data.SqlCl
 C:\Projetos\AppHARAS\HARAS_3D87\bin\Debug\net8.0-windows\zh-Hans\Microsoft.Data.SqlClient.resources.dll
 C:\Projetos\AppHARAS\HARAS_3D87\bin\Debug\net8.0-windows\zh-Hant\Microsoft.Data.SqlClient.resources.dll
 C:\Projetos\AppHARAS\HARAS_3D87\bin\Debug\net8.0-windows\runtimes\unix\lib\net8.0\Microsoft.Data.SqlClient.dll
-C:\Projetos\AppHARAS\HARAS_3D87\bin\Debug\net8.0-windows\runtimes\win\lib\net8.0\Microsoft.Data.SqlClient.dll
 C:\Projetos\AppHARAS\HARAS_3D87\bin\Debug\net8.0-windows\runtimes\win-arm64\native\Microsoft.Data.SqlClient.SNI.dll
-C:\Projetos\AppHARAS\HARAS_3D87\bin\Debug\net8.0-windows\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.dll
 C:\Projetos\AppHARAS\HARAS_3D87\bin\Debug\net8.0-windows\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.dll
 C:\Projetos\AppHARAS\HARAS_3D87\bin\Debug\net8.0-windows\runtimes\win\lib\net8.0\System.Diagnostics.EventLog.dll
 C:\Projetos\AppHARAS\HARAS_3D87\bin\Debug\net8.0-windows\runtimes\win\lib\net8.0\System.Security.Cryptography.Pkcs.dll

@@ -17,6 +17,7 @@ namespace HARAS_3D87
             InitializeComponent();
         }
 
+        // Evento de clique do menu "RAÇA"
         private void RACAToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Frm_Raca frm = new Frm_Raca();

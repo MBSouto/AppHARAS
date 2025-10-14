@@ -84,7 +84,7 @@ namespace HARAS_3D87
                     Mensagem = MeuAdapterRaca.ExcluirRaca(ChaveID);
 
                     // Exibe mensagem de erro, se houver
-                    if (Mensagem != "") MessageBox.Show(Mensagem, "Erro Encontrado:");
+                    if (Mensagem != "") MessageBox.Show(Mensagem, "Atenção:");
 
                     HabilitarControlesIniciais(true);
                     LimparFormulario();
