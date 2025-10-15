@@ -1,7 +1,59 @@
-﻿namespace HARAS_3D87
+﻿using System.Windows.Forms;
+
+namespace HARAS_3D87
 {
-    partial class Frm_Animais
+    partial class Frm_Animais : Form
     {
+        int ChaveID;
+
+        // Instancia da camada de dados
+        Camada_Animais87 MeuAdapterAnimais = new Camada_Animais87();
+
+        // Metodo para limpar o formulario
+        private void LimparFormulario()
+        {
+            txtNrchip.Clear();
+            txtNome.Clear();
+            txtFiltrar.Clear();
+            txtRaca.Clear();
+            txtValor.Clear();
+        }
+
+        private void HabilitarControlesIniciais(bool status)
+        {
+            Group_Lista.Enabled = status;
+            Group_Dados.Enabled = status;
+            habilitarBotoes(status);
+        }
+
+        private void habilitarBotoes(bool status)
+        {
+            btnNovo.Enabled = status;
+            btnEditar.Enabled = status;
+            btnExcluir.Enabled = status;
+            btnSalvar.Enabled = !status;
+            btnCancelar.Enabled = !status;
+        }
+
+        private void MontarLista(string varNome)
+        {
+            string Mensagem;
+
+            Mensagem = MeuAdapterAnimais.MontarListaAnimais(varNome);
+
+            // Verifica se ocorreu algum erro e exibe a mensagem
+            if (Mensagem != "") MessageBox.Show(Mensagem, "Erro encontrado: ");
+
+            // Exibe os dados no grid
+            dgvTabelaAnimais.DataSource = MeuAdapterAnimais.DtAnimais;
+
+            btnEditar.Enabled = dgvTabelaAnimais.Rows.Count > 0;
+            btnExcluir.Enabled = btnEditar.Enabled;
+
+            MostrarLista_noForm();
+        }
+
+
         /// <summary>
         /// Required designer variable.
         /// </summary>
@@ -81,6 +133,8 @@
             dgvTabelaAnimais.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             dgvTabelaAnimais.Size = new Size(546, 277);
             dgvTabelaAnimais.TabIndex = 0;
+            dgvTabelaAnimais.CellContentClick += dgvTabelaAnimais_CellContentClick;
+            dgvTabelaAnimais.RowEnter += dgvTabelaAnimaiS_RowEnter;
             // 
             // Group_Dados
             // 
@@ -259,7 +313,7 @@
             btnNovo.Image = (Image)resources.GetObject("btnNovo.Image");
             btnNovo.Location = new Point(22, 22);
             btnNovo.Name = "btnNovo";
-            btnNovo.Size = new Size(48, 48);
+            btnNovo.Size = new Size(50, 50);
             btnNovo.TabIndex = 0;
             btnNovo.UseVisualStyleBackColor = false;
             // 
