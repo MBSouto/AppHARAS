@@ -6,8 +6,10 @@ namespace HARAS_3D87
     {
         int ChaveID;
 
-        // Instancia da camada de dados
+        // Instancia os objetos da camada de dados 
         Camada_Animais87 MeuAdapterAnimais = new Camada_Animais87();
+        Camada_Raca87 MeuAdapterRaca = new Camada_Raca87();
+
 
         // Metodo para limpar o formulario
         private void LimparFormulario()
@@ -15,7 +17,6 @@ namespace HARAS_3D87
             txtNrchip.Clear();
             txtNome.Clear();
             txtFiltrar.Clear();
-            txtRaca.Clear();
             txtValor.Clear();
         }
 
@@ -52,7 +53,25 @@ namespace HARAS_3D87
 
             MostrarLista_noForm();
         }
+        private void Frm_animais_Load(object sender, EventArgs e)
+        {   
+            string Mensagem;
+            Mensagem = MeuAdapterRaca.MontarListaRaca("");
 
+            if (Mensagem != "") MessageBox.Show(Mensagem, "Atenção: ");
+
+            cmbRaca.Items.Clear();
+            cmbRaca.DataSource = MeuAdapterRaca.DtRaca;
+            cmbRaca.DisplayMember = "DESCRICAO";
+            cmbRaca.ValueMember = "RACA_ID";
+            cmbRaca.Refresh();
+
+
+            HabilitarControlesIniciais(true);
+            LimparFormulario();
+            MontarLista("");
+            txtFiltrar.Focus();
+        }
 
         /// <summary>
         /// Required designer variable.
@@ -84,11 +103,11 @@ namespace HARAS_3D87
             Group_Lista = new GroupBox();
             dgvTabelaAnimais = new DataGridView();
             Group_Dados = new GroupBox();
+            cmbRaca = new ComboBox();
             checkBox = new CheckBox();
             label7 = new Label();
             txtFiltrar = new TextBox();
             label5 = new Label();
-            txtRaca = new TextBox();
             label4 = new Label();
             txtNome = new TextBox();
             txtValor = new TextBox();
@@ -139,11 +158,11 @@ namespace HARAS_3D87
             // Group_Dados
             // 
             Group_Dados.BackColor = Color.White;
+            Group_Dados.Controls.Add(cmbRaca);
             Group_Dados.Controls.Add(checkBox);
             Group_Dados.Controls.Add(label7);
             Group_Dados.Controls.Add(txtFiltrar);
             Group_Dados.Controls.Add(label5);
-            Group_Dados.Controls.Add(txtRaca);
             Group_Dados.Controls.Add(label4);
             Group_Dados.Controls.Add(txtNome);
             Group_Dados.Controls.Add(txtValor);
@@ -157,6 +176,14 @@ namespace HARAS_3D87
             Group_Dados.Size = new Size(558, 246);
             Group_Dados.TabIndex = 2;
             Group_Dados.TabStop = false;
+            // 
+            // cmbRaca
+            // 
+            cmbRaca.FormattingEnabled = true;
+            cmbRaca.Location = new Point(24, 136);
+            cmbRaca.Name = "cmbRaca";
+            cmbRaca.Size = new Size(289, 23);
+            cmbRaca.TabIndex = 11;
             // 
             // checkBox
             // 
@@ -193,13 +220,6 @@ namespace HARAS_3D87
             label5.Size = new Size(36, 15);
             label5.TabIndex = 5;
             label5.Text = "Valor:";
-            // 
-            // txtRaca
-            // 
-            txtRaca.Location = new Point(24, 136);
-            txtRaca.Name = "txtRaca";
-            txtRaca.Size = new Size(213, 23);
-            txtRaca.TabIndex = 4;
             // 
             // label4
             // 
@@ -374,6 +394,7 @@ namespace HARAS_3D87
             Name = "Frm_Animais";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Animais";
+            Load += Frm_animais_Load;
             Group_Lista.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)dgvTabelaAnimais).EndInit();
             Group_Dados.ResumeLayout(false);
@@ -401,10 +422,10 @@ namespace HARAS_3D87
         private Button btnSalvar;
         private Button btnEditar;
         private Button btnExcluir;
-        private TextBox txtRaca;
         private Label label5;
         private Label label7;
         private TextBox txtFiltrar;
         private CheckBox checkBox;
+        private ComboBox cmbRaca;
     }
 }

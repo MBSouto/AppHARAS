@@ -17,6 +17,7 @@ namespace HARAS_3D87
         {
             InitializeComponent();
         }
+
         #region Configurar elementos do Formulário
         private void Label1_Click(object sender, EventArgs e)
         {
@@ -36,6 +37,15 @@ namespace HARAS_3D87
         private void txtDescricao_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void txtValor_Keypress(object sender, KeyPressEventArgs e)
+        {
+            // Permitir apenas números, vírgula e backspace
+            if (!char.IsNumber(e.KeyChar) && e.KeyChar != Convert.ToChar(8) && e.KeyChar != Convert.ToChar(44))
+            {
+                e.Handled = true;
+            }
         }
 
         private void label7_Click(object sender, EventArgs e)
@@ -77,8 +87,9 @@ namespace HARAS_3D87
                 txtNome.Text = MeuAdapterAnimais.snome;
                 checkBox.Text = MeuAdapterAnimais.bvendido.ToString();
                 txtValor.Text = MeuAdapterAnimais.dvalor.ToString();
+                cmbRaca.SelectedValue = MeuAdapterAnimais.iraca_id.ToString();
 
-    }
+            }
             // Habilita os botões de edição e exclusão
             else LimparFormulario();
         }

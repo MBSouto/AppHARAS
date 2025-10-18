@@ -21,7 +21,7 @@ namespace HARAS_3D87
         public DataTable DtAnimais = new DataTable();
 
         public string snome = "", sdtnascimento = "";
-        public Int32 inrchip = 0;
+        public Int32 inrchip = 0, iraca_id;
         public bool bvendido = false;
         public decimal dvalor = 0;
         #endregion
@@ -93,6 +93,9 @@ namespace HARAS_3D87
                     inrchip = Convert.ToInt32(Dr["NRCHIP"].ToString());
                     snome = Dr["NOME"] as string ?? string.Empty; // Operador de coalescência nula (??) para evitar erro de conversão
                     sdtnascimento = Dr["DTNASCIMENTO"] as string ?? string.Empty; // Operador de coalescência nula (??) para evitar erro de conversão
+                    dvalor = Convert.ToDecimal(Dr["VALOR"].ToString());
+                    iraca_id = Convert.ToInt32(Dr["RACA_ID"].ToString());
+                    bvendido = Convert.ToBoolean(Dr["VENDIDO"].ToString());
                 }
                 Dr.Close();
                 conexaoDB.FecharBanco(conexao);
