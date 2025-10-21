@@ -3,8 +3,36 @@
   "WorkspaceRootPath": "C:\\Projetos\\AppHARAS\\HARAS_3D87\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{4F988411-A976-4689-92D2-985C7A41BFDC}|HARAS_3D87.csproj|c:\\projetos\\appharas\\haras_3d87\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4F988411-A976-4689-92D2-985C7A41BFDC}|HARAS_3D87.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{4F988411-A976-4689-92D2-985C7A41BFDC}|HARAS_3D87.csproj|c:\\projetos\\appharas\\haras_3d87\\frm_animais.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4F988411-A976-4689-92D2-985C7A41BFDC}|HARAS_3D87.csproj|solutionrelative:frm_animais.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4F988411-A976-4689-92D2-985C7A41BFDC}|HARAS_3D87.csproj|c:\\projetos\\appharas\\haras_3d87\\frm_animais.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4F988411-A976-4689-92D2-985C7A41BFDC}|HARAS_3D87.csproj|solutionrelative:frm_animais.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4F988411-A976-4689-92D2-985C7A41BFDC}|HARAS_3D87.csproj|c:\\projetos\\appharas\\haras_3d87\\frm_raca.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4F988411-A976-4689-92D2-985C7A41BFDC}|HARAS_3D87.csproj|solutionrelative:frm_raca.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4F988411-A976-4689-92D2-985C7A41BFDC}|HARAS_3D87.csproj|c:\\projetos\\appharas\\haras_3d87\\frm_raca.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4F988411-A976-4689-92D2-985C7A41BFDC}|HARAS_3D87.csproj|solutionrelative:frm_raca.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4F988411-A976-4689-92D2-985C7A41BFDC}|HARAS_3D87.csproj|c:\\projetos\\appharas\\haras_3d87\\camada_raca87.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4F988411-A976-4689-92D2-985C7A41BFDC}|HARAS_3D87.csproj|solutionrelative:camada_raca87.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4F988411-A976-4689-92D2-985C7A41BFDC}|HARAS_3D87.csproj|c:\\projetos\\appharas\\haras_3d87\\camada_aminais87.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4F988411-A976-4689-92D2-985C7A41BFDC}|HARAS_3D87.csproj|solutionrelative:camada_aminais87.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4F988411-A976-4689-92D2-985C7A41BFDC}|HARAS_3D87.csproj|C:\\Projetos\\AppHARAS\\HARAS_3D87\\frm_raca.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{4F988411-A976-4689-92D2-985C7A41BFDC}|HARAS_3D87.csproj|solutionrelative:frm_raca.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4F988411-A976-4689-92D2-985C7A41BFDC}|HARAS_3D87.csproj|C:\\Projetos\\AppHARAS\\HARAS_3D87\\frm_animais.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{4F988411-A976-4689-92D2-985C7A41BFDC}|HARAS_3D87.csproj|solutionrelative:frm_animais.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     }
   ],
   "DocumentGroupContainers": [
@@ -14,20 +42,109 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 5,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Projetos\\AppHARAS\\HARAS_3D87\\Program.cs",
-              "RelativeDocumentMoniker": "Program.cs",
-              "ToolTip": "C:\\Projetos\\AppHARAS\\HARAS_3D87\\Program.cs",
-              "RelativeToolTip": "Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAABAAAAAAAAAA==",
+              "DocumentIndex": 1,
+              "Title": "Frm_Animais.Designer.cs",
+              "DocumentMoniker": "C:\\Projetos\\AppHARAS\\HARAS_3D87\\Frm_Animais.Designer.cs",
+              "RelativeDocumentMoniker": "Frm_Animais.Designer.cs",
+              "ToolTip": "C:\\Projetos\\AppHARAS\\HARAS_3D87\\Frm_Animais.Designer.cs",
+              "RelativeToolTip": "Frm_Animais.Designer.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAUAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-18T02:57:41.476Z",
+              "WhenOpened": "2025-10-21T03:05:24.615Z",
               "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Camada_Raca87.cs",
+              "DocumentMoniker": "C:\\Projetos\\AppHARAS\\HARAS_3D87\\Camada_Raca87.cs",
+              "RelativeDocumentMoniker": "Camada_Raca87.cs",
+              "ToolTip": "C:\\Projetos\\AppHARAS\\HARAS_3D87\\Camada_Raca87.cs",
+              "RelativeToolTip": "Camada_Raca87.cs",
+              "ViewState": "AgIAAPQAAAAAAAAAAAAcwN0AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-21T02:35:32.255Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Camada_Aminais87.cs",
+              "DocumentMoniker": "C:\\Projetos\\AppHARAS\\HARAS_3D87\\Camada_Aminais87.cs",
+              "RelativeDocumentMoniker": "Camada_Aminais87.cs",
+              "ToolTip": "C:\\Projetos\\AppHARAS\\HARAS_3D87\\Camada_Aminais87.cs",
+              "RelativeToolTip": "Camada_Aminais87.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAAIMAAABEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-21T01:45:27.053Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Frm_Raca.Designer.cs",
+              "DocumentMoniker": "C:\\Projetos\\AppHARAS\\HARAS_3D87\\Frm_Raca.Designer.cs",
+              "RelativeDocumentMoniker": "Frm_Raca.Designer.cs",
+              "ToolTip": "C:\\Projetos\\AppHARAS\\HARAS_3D87\\Frm_Raca.Designer.cs",
+              "RelativeToolTip": "Frm_Raca.Designer.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-21T03:05:09.018Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Frm_Raca.cs",
+              "DocumentMoniker": "C:\\Projetos\\AppHARAS\\HARAS_3D87\\Frm_Raca.cs",
+              "RelativeDocumentMoniker": "Frm_Raca.cs",
+              "ToolTip": "C:\\Projetos\\AppHARAS\\HARAS_3D87\\Frm_Raca.cs",
+              "RelativeToolTip": "Frm_Raca.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB8AAABCAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-21T02:39:31.433Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Frm_Animais.cs",
+              "DocumentMoniker": "C:\\Projetos\\AppHARAS\\HARAS_3D87\\Frm_Animais.cs",
+              "RelativeDocumentMoniker": "Frm_Animais.cs",
+              "ToolTip": "C:\\Projetos\\AppHARAS\\HARAS_3D87\\Frm_Animais.cs",
+              "RelativeToolTip": "Frm_Animais.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAABoAAAAiAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-19T18:21:07.523Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Frm_Animais.cs [Design]",
+              "DocumentMoniker": "C:\\Projetos\\AppHARAS\\HARAS_3D87\\Frm_Animais.cs",
+              "RelativeDocumentMoniker": "Frm_Animais.cs",
+              "ToolTip": "C:\\Projetos\\AppHARAS\\HARAS_3D87\\Frm_Animais.cs [Design]",
+              "RelativeToolTip": "Frm_Animais.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-19T18:26:00.223Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Frm_Raca.cs [Design]",
+              "DocumentMoniker": "C:\\Projetos\\AppHARAS\\HARAS_3D87\\Frm_Raca.cs",
+              "RelativeDocumentMoniker": "Frm_Raca.cs",
+              "ToolTip": "C:\\Projetos\\AppHARAS\\HARAS_3D87\\Frm_Raca.cs [Design]",
+              "RelativeToolTip": "Frm_Raca.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-19T18:11:03.659Z",
+              "EditorCaption": " [Design]"
             }
           ]
         }

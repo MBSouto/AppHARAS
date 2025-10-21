@@ -217,12 +217,5 @@ namespace HARAS_3D87
             }
         }
         #endregion
-
-        #region Metodo para apagar registros
-        private void ApagarRegistro()
-        {
-            
-        }
-        #endregion
     }
 }

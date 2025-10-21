@@ -32,11 +32,11 @@ namespace HARAS_3D87
             String msg = string.Empty;
             conexao = conexaoDB.AbrirBanco();
 
-            
-            SqlCommand cmd = new SqlCommand("STPMontarListaAnimais", conexao); 
+
+            SqlCommand cmd = new SqlCommand("STPMontarListaAnimais", conexao);
             cmd.CommandType = CommandType.StoredProcedure;
             cmd.Connection = conexao;
-            
+
             cmd.Parameters.Clear();
             cmd.Parameters.AddWithValue("@NOME", "%" + varNome + "%");
             try
@@ -122,5 +122,161 @@ namespace HARAS_3D87
 
         #endregion
 
+        #region Método para inserir um novo Animal
+
+        public string InserirAnimais(Int32 varChip,
+                                    string varNome,
+                                        DateTime varDtnascimento,
+                                            decimal varValor,
+                                                bool varVendido,
+                                                    Int32 varRacaID)
+        {
+            string msg = string.Empty;
+
+            try
+            {
+                conexao = conexaoDB.AbrirBanco();
+
+                //Montar comando com o stored procedure
+                SqlCommand cmd = new SqlCommand("STPInserirAnimais", conexao);
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Connection = conexao;
+
+                //Parâmetros de entrada (imput) para o stored procedure
+                cmd.Parameters.Clear();
+                cmd.Parameters.AddWithValue("@CHIP", varChip);
+                cmd.Parameters.AddWithValue("@NOME", varNome);
+                cmd.Parameters.AddWithValue("@DTNASCIMENTO", varDtnascimento);
+                cmd.Parameters.AddWithValue("@VALOR", varValor);
+                cmd.Parameters.AddWithValue("@VENDIDO", varVendido);
+                cmd.Parameters.AddWithValue("@RACAID", varRacaID);
+
+                cmd.ExecuteNonQuery();
+
+                conexaoDB.FecharBanco(conexao);
+                msg = "Registro inserido com sucesso!";
+            }
+            catch (SqlException sqlErrr)
+            {
+                Camada_Conexao87.RetornaErroSqlServer retErro = new Camada_Conexao87.RetornaErroSqlServer();
+                string msgErro = retErro.RetornaErro(sqlErrr.Number);
+                if (string.IsNullOrEmpty(msgErro))
+                    msgErro = sqlErrr.Message;
+                msg = msgErro;
+            }
+            catch (Exception err)
+            {
+                //Armazenar a mensagem de erro na variável msg
+                msg = err.Message.ToString();
+            }
+            finally
+            {
+                if (conexao.State == ConnectionState.Open) conexaoDB.FecharBanco(conexao);
+            }
+            return msg; //Retorna mensagem para o formulário
+        }
+
+        #endregion
+
+        #region Método para alterar um Animal existente
+
+        public string AlterarAnimais(Int32 varChip,
+                                    string varNome,
+                                        DateTime varDtnascimento,
+                                            decimal varValor,
+                                                bool varVendido,
+                                                    Int32 varRacaID,
+                                                        Int32 varAnimaisID)
+        {
+            string msg = string.Empty;
+
+            try
+            {
+                conexao = conexaoDB.AbrirBanco();
+
+                //Montar comando com o stored procedure
+                SqlCommand cmd = new SqlCommand("STPAlterarAnimais", conexao);
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Connection = conexao;
+
+                //Parâmetros de entrada (imput) para o stored procedure
+                cmd.Parameters.Clear();
+                cmd.Parameters.AddWithValue("@CHIP", varChip);
+                cmd.Parameters.AddWithValue("@NOME", varNome);
+                cmd.Parameters.AddWithValue("@DTNASCIMENTO", varDtnascimento);
+                cmd.Parameters.AddWithValue("@VALOR", varValor);
+                cmd.Parameters.AddWithValue("@VENDIDO", varVendido);
+                cmd.Parameters.AddWithValue("@RACAID", varRacaID);
+                cmd.Parameters.AddWithValue("@ANIMAISID", varAnimaisID);
+                cmd.ExecuteNonQuery();
+
+                conexaoDB.FecharBanco(conexao);
+                msg = "Registro alterado com sucesso!";
+            }
+            catch (SqlException sqlErrr)
+            {
+                Camada_Conexao87.RetornaErroSqlServer retErro = new Camada_Conexao87.RetornaErroSqlServer();
+                string msgErro = retErro.RetornaErro(sqlErrr.Number);
+                if (string.IsNullOrEmpty(msgErro))
+                    msgErro = sqlErrr.Message;
+                msg = msgErro;
+            }
+            catch (Exception err)
+            {
+                //Armazenar a mensagem de erro na variável msg
+                msg = err.Message.ToString();
+            }
+            finally
+            {
+                if (conexao.State == ConnectionState.Open) conexaoDB.FecharBanco(conexao);
+            }
+            return msg; //Retorna mensagem para o formulário
+        }
+        #endregion
+
+        #region Método para excluir um Animal existente
+        public string ExcluirRaca(Int32 varAnimaisID)
+        {
+            string msg = string.Empty;
+
+            try
+            {
+                conexao = conexaoDB.AbrirBanco();
+
+                //Montar comando com o stored procedure
+                SqlCommand cmd = new SqlCommand("STPExcluirAnimais", conexao);
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Connection = conexao;
+
+                //Parâmetros de entrada (imput) para o stored procedure
+                cmd.Parameters.Clear();
+                cmd.Parameters.AddWithValue("@ANIMAISID", varAnimaisID);
+                cmd.ExecuteNonQuery();
+
+                conexaoDB.FecharBanco(conexao);
+
+                msg = "Registro excluído com sucesso!";
+            }
+            catch (SqlException sqlErrr)
+            {
+                Camada_Conexao87.RetornaErroSqlServer retErro = new Camada_Conexao87.RetornaErroSqlServer();
+                string msgErro = retErro.RetornaErro(sqlErrr.Number);
+                if (string.IsNullOrEmpty(msgErro))
+                    msgErro = sqlErrr.Message;
+                msg = msgErro;
+            }
+            catch (Exception err)
+            {
+                //Armazenar a mensagem de erro na variável msg
+                msg = err.Message.ToString();
+            }
+            finally
+            {
+                if (conexao.State == ConnectionState.Open) conexaoDB.FecharBanco(conexao);
+            }
+            return msg; //Retorna mensagem para o formulário
+        }
+
+        #endregion
     }
 }

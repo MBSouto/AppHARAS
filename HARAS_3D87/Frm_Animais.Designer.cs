@@ -1,9 +1,11 @@
-﻿using System.Windows.Forms;
+﻿using System.DirectoryServices.ActiveDirectory;
+using System.Windows.Forms;
 
 namespace HARAS_3D87
 {
     partial class Frm_Animais : Form
     {
+        int operacao;
         int ChaveID;
 
         // Instancia os objetos da camada de dados 
@@ -16,8 +18,9 @@ namespace HARAS_3D87
         {
             txtNrchip.Clear();
             txtNome.Clear();
-            txtFiltrar.Clear();
             txtValor.Clear();
+            operacao = 0;
+            ChaveID = 0;
         }
 
         private void HabilitarControlesIniciais(bool status)
@@ -60,17 +63,18 @@ namespace HARAS_3D87
 
             if (Mensagem != "") MessageBox.Show(Mensagem, "Atenção: ");
 
+            // Preenche o ComboBox de Raça
             cmbRaca.Items.Clear();
             cmbRaca.DataSource = MeuAdapterRaca.DtRaca;
             cmbRaca.DisplayMember = "DESCRICAO";
             cmbRaca.ValueMember = "RACA_ID";
             cmbRaca.Refresh();
 
-
+            // Habilita os controles iniciais
             HabilitarControlesIniciais(true);
             LimparFormulario();
             MontarLista("");
-            txtFiltrar.Focus();
+            txtPesquisar.Focus();
         }
 
         /// <summary>
@@ -106,7 +110,7 @@ namespace HARAS_3D87
             cmbRaca = new ComboBox();
             checkBox = new CheckBox();
             label7 = new Label();
-            txtFiltrar = new TextBox();
+            txtPesquisar = new TextBox();
             label5 = new Label();
             label4 = new Label();
             txtNome = new TextBox();
@@ -161,7 +165,7 @@ namespace HARAS_3D87
             Group_Dados.Controls.Add(cmbRaca);
             Group_Dados.Controls.Add(checkBox);
             Group_Dados.Controls.Add(label7);
-            Group_Dados.Controls.Add(txtFiltrar);
+            Group_Dados.Controls.Add(txtPesquisar);
             Group_Dados.Controls.Add(label5);
             Group_Dados.Controls.Add(label4);
             Group_Dados.Controls.Add(txtNome);
@@ -205,12 +209,13 @@ namespace HARAS_3D87
             label7.Text = "Pesquisar:";
             label7.Click += label7_Click;
             // 
-            // txtFiltrar
+            // txtPesquisar
             // 
-            txtFiltrar.Location = new Point(24, 208);
-            txtFiltrar.Name = "txtFiltrar";
-            txtFiltrar.Size = new Size(509, 23);
-            txtFiltrar.TabIndex = 8;
+            txtPesquisar.Location = new Point(24, 208);
+            txtPesquisar.Name = "txtPesquisar";
+            txtPesquisar.Size = new Size(509, 23);
+            txtPesquisar.TabIndex = 8;
+            txtPesquisar.TextChanged += txtPesquisar_TextChanged;
             // 
             // label5
             // 
@@ -321,6 +326,7 @@ namespace HARAS_3D87
             btnCancelar.Size = new Size(48, 48);
             btnCancelar.TabIndex = 4;
             btnCancelar.UseVisualStyleBackColor = false;
+            btnCancelar.Click += btnCancelar_Click;
             // 
             // btnNovo
             // 
@@ -336,6 +342,7 @@ namespace HARAS_3D87
             btnNovo.Size = new Size(50, 50);
             btnNovo.TabIndex = 0;
             btnNovo.UseVisualStyleBackColor = false;
+            btnNovo.Click += btnNovo_Click;
             // 
             // btnSalvar
             // 
@@ -351,6 +358,7 @@ namespace HARAS_3D87
             btnSalvar.Size = new Size(48, 48);
             btnSalvar.TabIndex = 4;
             btnSalvar.UseVisualStyleBackColor = false;
+            btnSalvar.Click += btnSalvar_Click;
             // 
             // btnEditar
             // 
@@ -366,6 +374,7 @@ namespace HARAS_3D87
             btnEditar.Size = new Size(48, 48);
             btnEditar.TabIndex = 2;
             btnEditar.UseVisualStyleBackColor = false;
+            btnEditar.Click += btnEditar_Click;
             // 
             // btnExcluir
             // 
@@ -381,6 +390,7 @@ namespace HARAS_3D87
             btnExcluir.Size = new Size(48, 48);
             btnExcluir.TabIndex = 3;
             btnExcluir.UseVisualStyleBackColor = false;
+            btnExcluir.Click += btnExcluir_Click;
             // 
             // Frm_Animais
             // 
@@ -424,7 +434,7 @@ namespace HARAS_3D87
         private Button btnExcluir;
         private Label label5;
         private Label label7;
-        private TextBox txtFiltrar;
+        private TextBox txtPesquisar;
         private CheckBox checkBox;
         private ComboBox cmbRaca;
     }
