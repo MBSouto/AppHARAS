@@ -129,7 +129,7 @@ namespace HARAS_3D87
                                         DateTime varDtnascimento,
                                             decimal varValor,
                                                 bool varVendido,
-                                                    Int32 varRacaID)
+                                                    int varRacaID)
         {
             string msg = string.Empty;
 
@@ -235,7 +235,7 @@ namespace HARAS_3D87
         #endregion
 
         #region Método para excluir um Animal existente
-        public string ExcluirRaca(Int32 varAnimaisID)
+        public string ExcluirAnimais(Int32 varAnimaisID)
         {
             string msg = string.Empty;
 

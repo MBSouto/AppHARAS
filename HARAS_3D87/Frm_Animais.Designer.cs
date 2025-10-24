@@ -248,7 +248,7 @@ namespace HARAS_3D87
             // txtValor
             // 
             txtValor.Location = new Point(411, 37);
-            txtValor.MaxLength = 6;
+            txtValor.MaxLength = 10;
             txtValor.Name = "txtValor";
             txtValor.Size = new Size(122, 23);
             txtValor.TabIndex = 1;
@@ -265,9 +265,11 @@ namespace HARAS_3D87
             // txtNrchip
             // 
             txtNrchip.Location = new Point(24, 37);
+            txtNrchip.MaxLength = 8;
             txtNrchip.Name = "txtNrchip";
             txtNrchip.Size = new Size(127, 23);
             txtNrchip.TabIndex = 0;
+            txtNrchip.TextAlign = HorizontalAlignment.Right;
             // 
             // Label2
             // 

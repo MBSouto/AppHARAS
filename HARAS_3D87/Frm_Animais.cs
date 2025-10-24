@@ -59,6 +59,7 @@ namespace HARAS_3D87
                 txtNome.Focus();
                 return;
             }
+            GravarRegistro(operacao);
         }
 
         private void btnExcluir_Click(object sender, EventArgs e)
@@ -80,7 +81,7 @@ namespace HARAS_3D87
                 try
                 {
                     // Chama o método para excluir o registro
-                    Mensagem = MeuAdapterRaca.ExcluirRaca(ChaveID);
+                    Mensagem = MeuAdapterAnimais.ExcluirAnimais(ChaveID);
 
                     // Exibe mensagem de erro, se houver
                     if (Mensagem != "") MessageBox.Show(Mensagem, "Atenção:");
@@ -125,7 +126,14 @@ namespace HARAS_3D87
                 e.Handled = true;
             }
         }
-
+        private void txtChip_Keypress(object sender, KeyPressEventArgs e)
+        {
+            // Permitir apenas números, vírgula e backspace
+            if (!char.IsNumber(e.KeyChar) && e.KeyChar != Convert.ToChar(8) && e.KeyChar != Convert.ToChar(44))
+            {
+                e.Handled = true;
+            }
+        }
         private void label7_Click(object sender, EventArgs e)
         {
 
@@ -188,14 +196,13 @@ namespace HARAS_3D87
             {
                 try
                 {
-                    Mensagem = MeuAdapterAnimais.AlterarAnimais
+                    Mensagem = MeuAdapterAnimais.InserirAnimais
                                     (int.Parse(txtNrchip.Text),
                                         txtNome.Text,
                                            Convert.ToDateTime(txtNascimento.Text),
                                               decimal.Parse(txtValor.Text),
                                                  checkBox.Checked,
-                                                     Convert.ToInt32(cmbRaca.SelectedValue),
-                                                         ChaveID);
+                                                     Convert.ToInt32(cmbRaca.SelectedValue));
 
 
 
@@ -222,7 +229,7 @@ namespace HARAS_3D87
                                             txtNascimento.Value,
                                                decimal.Parse(txtValor.Text),
                                                   checkBox.Checked,
-                                                     Convert.ToInt32(cmbRaca.SelectedValue),
+                                                     Convert.ToInt32(cmbRaca.ValueMember),
                                                          ChaveID); // ID do animal a ser alterado
 
 
