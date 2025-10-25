@@ -31,5 +31,17 @@ namespace HARAS_3D87
             frm.ShowDialog();
             frm.Dispose();
         }
+
+        private void sairToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
+
+        private void ajudaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Frm_Ajuda frm = new Frm_Ajuda();
+            frm.ShowDialog();
+            frm.Dispose();
+        }
     }
 }

@@ -26,6 +26,7 @@ namespace HARAS_3D87
             operacao = 2;
             MostrarLista_noForm();
             Group_Dados.Enabled = true;
+            txtPesquisar.Enabled = false;
             txtNrchip.Focus();
         }
 
@@ -34,6 +35,7 @@ namespace HARAS_3D87
             HabilitarControlesIniciais(true);
             LimparFormulario();
             MontarLista("");
+            txtPesquisar.Enabled = true;
         }
 
         private void btnNovo_Click(object sender, EventArgs e)
@@ -42,6 +44,7 @@ namespace HARAS_3D87
             HabilitarControlesIniciais(false);
             Group_Dados.Enabled = true;
             operacao = 1;
+            txtPesquisar.Enabled = false;
             txtNrchip.Focus();
         }
 
@@ -53,13 +56,20 @@ namespace HARAS_3D87
                 txtNrchip.Focus();
                 return;
             }
-            if (string.IsNullOrEmpty(txtNome.Text.Trim()))
+            else if (string.IsNullOrEmpty(txtNome.Text.Trim()))
             {
                 MessageBox.Show("O campo Nome é obrigatório!", "Atenção:");
                 txtNome.Focus();
                 return;
             }
+            else if (string.IsNullOrEmpty(txtValor.Text.Trim()))
+            {
+                MessageBox.Show("O campo Valor é obrigatório!", "Atenção:");
+                txtValor.Focus();
+                return;
+            }
             GravarRegistro(operacao);
+            txtPesquisar.Enabled = true;
         }
 
         private void btnExcluir_Click(object sender, EventArgs e)
@@ -96,6 +106,7 @@ namespace HARAS_3D87
                     MessageBox.Show(ex.Message.ToString());
                 }
             }
+            txtPesquisar.Enabled = true;
 
         }
         private void Label1_Click(object sender, EventArgs e)
@@ -113,23 +124,18 @@ namespace HARAS_3D87
 
         }
 
-        private void txtDescricao_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
         private void txtValor_Keypress(object sender, KeyPressEventArgs e)
         {
-            // Permitir apenas números, vírgula e backspace
-            if (!char.IsNumber(e.KeyChar) && e.KeyChar != Convert.ToChar(8) && e.KeyChar != Convert.ToChar(44))
+            // Permitir apenas números, backspace e ponto decimal
+            if (!char.IsNumber(e.KeyChar) && e.KeyChar != Convert.ToChar(8) && e.KeyChar != Convert.ToChar(46))
             {
                 e.Handled = true;
             }
         }
         private void txtChip_Keypress(object sender, KeyPressEventArgs e)
         {
-            // Permitir apenas números, vírgula e backspace
-            if (!char.IsNumber(e.KeyChar) && e.KeyChar != Convert.ToChar(8) && e.KeyChar != Convert.ToChar(44))
+            // Permitir apenas números e backspace
+            if (!char.IsNumber(e.KeyChar) && e.KeyChar != Convert.ToChar(8))
             {
                 e.Handled = true;
             }
@@ -229,8 +235,8 @@ namespace HARAS_3D87
                                             txtNascimento.Value,
                                                decimal.Parse(txtValor.Text),
                                                   checkBox.Checked,
-                                                     Convert.ToInt32(cmbRaca.ValueMember),
-                                                         ChaveID); // ID do animal a ser alterado
+                                                     Convert.ToInt32(cmbRaca.SelectedValue),
+                                                        ChaveID);
 
 
                     HabilitarControlesIniciais(true);

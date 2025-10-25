@@ -26,6 +26,7 @@ namespace HARAS_3D87
             operacao = 2;
             MostrarRegistro_noForm();
             Group_Dados.Enabled = true;
+            txtFiltrar.Enabled = false;
             txtRegistro.Focus();
         }
 
@@ -34,6 +35,7 @@ namespace HARAS_3D87
             HabilitarControlesIniciais(true);
             LimparFormulario();
             MontarLista("");
+            txtFiltrar.Enabled = true;
         }
 
         private void btnNovo_Click(object sender, EventArgs e)
@@ -41,6 +43,7 @@ namespace HARAS_3D87
             LimparFormulario();
             HabilitarControlesIniciais(false);
             Group_Dados.Enabled = true;
+            txtFiltrar.Enabled = false;
             operacao = 1;
             txtRegistro.Focus();
         }
@@ -60,6 +63,7 @@ namespace HARAS_3D87
                 return;
             }
             GravarRegistro(operacao);
+            txtFiltrar.Enabled = true;
         }
 
         private void btnExcluir_Click(object sender, EventArgs e)
@@ -96,7 +100,7 @@ namespace HARAS_3D87
                     MessageBox.Show(ex.Message.ToString());
                 }
             }
-            
+            txtFiltrar.Enabled = true;
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -154,8 +158,7 @@ namespace HARAS_3D87
 
                 //  Exibe mensagem de erro, se houver
                 if (Mensagem != "") MessageBox.Show(Mensagem, "Erro encontrado: ");
-                /* Exceção aguardando correção "parâmetro @RACAID não encontrado na procedure STPLocalizarRacaChaveID",
-                Erro tratado, o parâmetro da procedure estava com o nome diferente, o correto é @RACA_ID */
+
 
                 // Preenche os campos do formulário com os dados do registro
                 txtRegistro.Text = MeuAdapterRaca.iRegistro_Raca.ToString();

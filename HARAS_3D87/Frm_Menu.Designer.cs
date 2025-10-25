@@ -57,14 +57,14 @@
             // raçasToolStripMenuItem
             // 
             raçasToolStripMenuItem.Name = "raçasToolStripMenuItem";
-            raçasToolStripMenuItem.Size = new Size(180, 22);
+            raçasToolStripMenuItem.Size = new Size(117, 22);
             raçasToolStripMenuItem.Text = "Raças";
             raçasToolStripMenuItem.Click += RACAToolStripMenuItem_Click;
             // 
             // animaisToolStripMenuItem
             // 
             animaisToolStripMenuItem.Name = "animaisToolStripMenuItem";
-            animaisToolStripMenuItem.Size = new Size(180, 22);
+            animaisToolStripMenuItem.Size = new Size(117, 22);
             animaisToolStripMenuItem.Text = "Animais";
             animaisToolStripMenuItem.Click += ANIMAISToolStripMenuItem_Click;
             // 
@@ -73,12 +73,14 @@
             ajudaToolStripMenuItem.Name = "ajudaToolStripMenuItem";
             ajudaToolStripMenuItem.Size = new Size(50, 20);
             ajudaToolStripMenuItem.Text = "Ajuda";
+            ajudaToolStripMenuItem.Click += ajudaToolStripMenuItem_Click;
             // 
             // sairToolStripMenuItem
             // 
             sairToolStripMenuItem.Name = "sairToolStripMenuItem";
             sairToolStripMenuItem.Size = new Size(38, 20);
             sairToolStripMenuItem.Text = "Sair";
+            sairToolStripMenuItem.Click += sairToolStripMenuItem_Click;
             // 
             // Frm_Menu
             // 

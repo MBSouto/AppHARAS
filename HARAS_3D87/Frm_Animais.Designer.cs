@@ -139,14 +139,13 @@ namespace HARAS_3D87
             Group_Lista.Location = new Point(12, 264);
             Group_Lista.Name = "Group_Lista";
             Group_Lista.Size = new Size(558, 294);
-            Group_Lista.TabIndex = 1;
+            Group_Lista.TabIndex = 2;
             Group_Lista.TabStop = false;
             // 
             // dgvTabelaAnimais
             // 
             dgvTabelaAnimais.AllowUserToAddRows = false;
             dgvTabelaAnimais.AllowUserToDeleteRows = false;
-            dgvTabelaAnimais.AllowUserToResizeColumns = false;
             dgvTabelaAnimais.AllowUserToResizeRows = false;
             dgvTabelaAnimais.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dgvTabelaAnimais.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -178,7 +177,7 @@ namespace HARAS_3D87
             Group_Dados.Location = new Point(12, 12);
             Group_Dados.Name = "Group_Dados";
             Group_Dados.Size = new Size(558, 246);
-            Group_Dados.TabIndex = 2;
+            Group_Dados.TabIndex = 0;
             Group_Dados.TabStop = false;
             // 
             // cmbRaca
@@ -187,7 +186,7 @@ namespace HARAS_3D87
             cmbRaca.Location = new Point(24, 136);
             cmbRaca.Name = "cmbRaca";
             cmbRaca.Size = new Size(289, 23);
-            cmbRaca.TabIndex = 11;
+            cmbRaca.TabIndex = 5;
             // 
             // checkBox
             // 
@@ -195,7 +194,7 @@ namespace HARAS_3D87
             checkBox.Location = new Point(244, 39);
             checkBox.Name = "checkBox";
             checkBox.Size = new Size(69, 19);
-            checkBox.TabIndex = 10;
+            checkBox.TabIndex = 2;
             checkBox.Text = "Vendido";
             checkBox.UseVisualStyleBackColor = true;
             // 
@@ -205,7 +204,7 @@ namespace HARAS_3D87
             label7.Location = new Point(24, 190);
             label7.Name = "label7";
             label7.Size = new Size(60, 15);
-            label7.TabIndex = 9;
+            label7.TabIndex = 0;
             label7.Text = "Pesquisar:";
             label7.Click += label7_Click;
             // 
@@ -214,7 +213,7 @@ namespace HARAS_3D87
             txtPesquisar.Location = new Point(24, 208);
             txtPesquisar.Name = "txtPesquisar";
             txtPesquisar.Size = new Size(509, 23);
-            txtPesquisar.TabIndex = 8;
+            txtPesquisar.TabIndex = 7;
             txtPesquisar.TextChanged += txtPesquisar_TextChanged;
             // 
             // label5
@@ -223,7 +222,7 @@ namespace HARAS_3D87
             label5.Location = new Point(411, 19);
             label5.Name = "label5";
             label5.Size = new Size(36, 15);
-            label5.TabIndex = 5;
+            label5.TabIndex = 0;
             label5.Text = "Valor:";
             // 
             // label4
@@ -232,7 +231,7 @@ namespace HARAS_3D87
             label4.Location = new Point(24, 118);
             label4.Name = "label4";
             label4.Size = new Size(35, 15);
-            label4.TabIndex = 3;
+            label4.TabIndex = 0;
             label4.Text = "Raça:";
             label4.Click += label4_Click;
             // 
@@ -242,8 +241,7 @@ namespace HARAS_3D87
             txtNome.Location = new Point(24, 92);
             txtNome.Name = "txtNome";
             txtNome.Size = new Size(509, 23);
-            txtNome.TabIndex = 3;
-            txtNome.TextChanged += txtDescricao_TextChanged;
+            txtNome.TabIndex = 4;
             // 
             // txtValor
             // 
@@ -251,8 +249,9 @@ namespace HARAS_3D87
             txtValor.MaxLength = 10;
             txtValor.Name = "txtValor";
             txtValor.Size = new Size(122, 23);
-            txtValor.TabIndex = 1;
+            txtValor.TabIndex = 3;
             txtValor.TextAlign = HorizontalAlignment.Right;
+            txtValor.KeyPress += txtValor_Keypress;
             // 
             // txtNascimento
             // 
@@ -260,7 +259,7 @@ namespace HARAS_3D87
             txtNascimento.Location = new Point(371, 136);
             txtNascimento.Name = "txtNascimento";
             txtNascimento.Size = new Size(162, 23);
-            txtNascimento.TabIndex = 2;
+            txtNascimento.TabIndex = 6;
             // 
             // txtNrchip
             // 
@@ -268,8 +267,9 @@ namespace HARAS_3D87
             txtNrchip.MaxLength = 8;
             txtNrchip.Name = "txtNrchip";
             txtNrchip.Size = new Size(127, 23);
-            txtNrchip.TabIndex = 0;
+            txtNrchip.TabIndex = 1;
             txtNrchip.TextAlign = HorizontalAlignment.Right;
+            txtNrchip.KeyPress += txtChip_Keypress;
             // 
             // Label2
             // 
@@ -277,7 +277,7 @@ namespace HARAS_3D87
             Label2.Location = new Point(24, 74);
             Label2.Name = "Label2";
             Label2.Size = new Size(43, 15);
-            Label2.TabIndex = 1;
+            Label2.TabIndex = 0;
             Label2.Text = "Nome:";
             Label2.Click += Label2_Click;
             // 
@@ -287,7 +287,7 @@ namespace HARAS_3D87
             Label3.Location = new Point(371, 118);
             Label3.Name = "Label3";
             Label3.Size = new Size(74, 15);
-            Label3.TabIndex = 2;
+            Label3.TabIndex = 0;
             Label3.Text = "Nascimento:";
             // 
             // Label1
@@ -311,7 +311,7 @@ namespace HARAS_3D87
             Group_Barra.Location = new Point(576, 12);
             Group_Barra.Name = "Group_Barra";
             Group_Barra.Size = new Size(92, 546);
-            Group_Barra.TabIndex = 3;
+            Group_Barra.TabIndex = 1;
             Group_Barra.TabStop = false;
             // 
             // btnCancelar
@@ -358,7 +358,7 @@ namespace HARAS_3D87
             btnSalvar.Location = new Point(22, 367);
             btnSalvar.Name = "btnSalvar";
             btnSalvar.Size = new Size(48, 48);
-            btnSalvar.TabIndex = 4;
+            btnSalvar.TabIndex = 3;
             btnSalvar.UseVisualStyleBackColor = false;
             btnSalvar.Click += btnSalvar_Click;
             // 
@@ -374,7 +374,7 @@ namespace HARAS_3D87
             btnEditar.Location = new Point(22, 149);
             btnEditar.Name = "btnEditar";
             btnEditar.Size = new Size(48, 48);
-            btnEditar.TabIndex = 2;
+            btnEditar.TabIndex = 1;
             btnEditar.UseVisualStyleBackColor = false;
             btnEditar.Click += btnEditar_Click;
             // 
@@ -390,7 +390,7 @@ namespace HARAS_3D87
             btnExcluir.Location = new Point(22, 252);
             btnExcluir.Name = "btnExcluir";
             btnExcluir.Size = new Size(48, 48);
-            btnExcluir.TabIndex = 3;
+            btnExcluir.TabIndex = 2;
             btnExcluir.UseVisualStyleBackColor = false;
             btnExcluir.Click += btnExcluir_Click;
             // 
